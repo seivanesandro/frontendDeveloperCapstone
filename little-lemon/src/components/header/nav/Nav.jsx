@@ -1,17 +1,17 @@
 import React from 'react';
-//FIXME:import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 //import { Outlet, Link } from 'react-router-dom';
 import { useState } from 'react';
 
 import {
     IoIosCloseCircleOutline,
     IoIosMenu,
-    IoMdPerson
+    IoMdPerson,
+    IoIosHome,
 } from 'react-icons/io';
 import styled, { keyframes } from 'styled-components';
 import { devices } from '../../../constantes';
 import logo from '../../../assets/logo.png';
-//FIXME:import './nav.css';
 
 const FadeInAnimation = keyframes`
     0% { opacity: 0; transform: translateY(-10%); }
@@ -26,7 +26,7 @@ const NavContainerStyle = styled.div`
     align-items: center;
     padding: 2rem;
     gap: 1rem;
-    background: lightgreen;
+    background: #fff;
     z-index: 0;
 
     @media only screen and (${devices.m5}) {
@@ -87,7 +87,7 @@ const NavContent = styled.nav`
         box-shadow: 0 0 0.3rem black;
         gap: 2rem;
 
-        &.active{
+        &.active {
             height: 75%;
             padding: 1em 2em;
         }
@@ -95,13 +95,16 @@ const NavContent = styled.nav`
 `;
 
 const NavItemStyle = styled.a`
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
     color: green;
     font-weight: 600;
     text-decoration: inherit;
     font-family: 'Markazi', sans-serif;
 
-    &:hover{
-        color:yellow;
+    &:hover {
+        color: yellow;
     }
 
     @media only screen and (${devices.laptop3}) {
@@ -126,7 +129,7 @@ const NavItemStyle = styled.a`
 const Img = styled.img`
     width: 190px;
     height: 56px;
- 
+
     @media only screen and (${devices.laptop3}) {
         width: 190px;
         height: 56px;
@@ -178,8 +181,7 @@ const Logo = styled.img`
         height: 46px;
     }
 `;
-
-function Nav({ displayOn }) {
+function Nav() {
     const [isOpen, setIsOpen] = useState(false);
     const toggleNav = () => {
         setIsOpen(!isOpen);
@@ -196,14 +198,10 @@ function Nav({ displayOn }) {
                         size={30}
                     />
                 ) : (
-                    <IoIosMenu size={38} />
+                    <IoIosMenu size={20} />
                 )}
             </NavMobile>
-            <Logo
-                src={logo}
-                alt="logo"
-                displayOn='none'
-            />
+            <Logo src={logo} alt="logo" />
             {isOpen ? (
                 <NavContent
                     className="nav active"
@@ -222,7 +220,8 @@ function Nav({ displayOn }) {
                         href="/./"
                         className="nav-item"
                     >
-                        Home
+                        <IoIosHome size={20} />
+                        {''}Home
                     </NavItemStyle>
                     <NavItemStyle
                         href="/./"
@@ -240,7 +239,7 @@ function Nav({ displayOn }) {
                         href="/./"
                         className="nav-item"
                     >
-                        Reservations
+                        Reserves
                     </NavItemStyle>
                     <NavItemStyle
                         href="/./"
@@ -252,7 +251,7 @@ function Nav({ displayOn }) {
                         href="/./"
                         className="nav-item"
                     >
-                        <IoMdPerson />
+                        <IoMdPerson size={20} />
                     </NavItemStyle>
                 </NavContent>
             ) : (
@@ -273,7 +272,8 @@ function Nav({ displayOn }) {
                         href="/./"
                         className="nav-item"
                     >
-                        Home
+                        <IoIosHome size={20} />
+                        {''}Home
                     </NavItemStyle>
                     <NavItemStyle
                         href="/./"
@@ -291,7 +291,7 @@ function Nav({ displayOn }) {
                         href="/./"
                         className="nav-item"
                     >
-                        Reservations
+                        Reserves
                     </NavItemStyle>
                     <NavItemStyle
                         href="/./"
@@ -303,7 +303,7 @@ function Nav({ displayOn }) {
                         href="/./"
                         className="nav-item"
                     >
-                        <IoMdPerson />
+                        <IoMdPerson size={20} />
                     </NavItemStyle>
                 </NavContent>
             )}
@@ -311,6 +311,7 @@ function Nav({ displayOn }) {
     );
 }
 
-Nav.propTypes = {}
+Nav.propTypes = {
+};
 
 export default Nav

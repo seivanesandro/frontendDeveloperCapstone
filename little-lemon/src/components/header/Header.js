@@ -8,9 +8,9 @@ import Nav from './nav/Nav';
 //FIXME:
 function Header(props) {
   return (
-      <>
+      <header className='header'>
         <Nav />
-      </>
+      </header>
   );
 }
 

@@ -2,7 +2,13 @@ import './App.css';
 import styled from 'styled-components';
 
 import Header from './components/header/Header';
+import HomePage from './pages/HomePage';
 import Footer from  './components/footer/Footer';
+
+import BookingPage from './pages/BookingPage';
+
+//import ComfirmedBooking from './pages/ConfirmedBooking';
+//import {  Route,  Routes } from "react-router-dom"
 
 
 
@@ -16,14 +22,11 @@ const AppContainer = styled.div`
 `;
 function App() {
   return (
-      <AppContainer>
-          
-
+      <AppContainer className='App-Container'>
           <Header />
-          <div>header</div>
-          <div>hero</div>
-          <div>main</div>
-
+          <HomePage />
+          <BookingPage />
+          <div>ComfirmedBooking</div>
           <Footer />
       </AppContainer>
   );

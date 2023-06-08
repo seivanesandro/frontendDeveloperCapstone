@@ -16,22 +16,23 @@ High-res laptop or desktop: 1920 x 1080.
 */
 
 const breakpoints = {
+    m: '330px',
     m1: '360px',
     m2: '375px',
     m3: '475px',
     m4: '575px',
     m5: '675px',
-    
+
     tablet1: '720px',
     tablet2: '880px',
     tablet3: '980px',
 
-    laptop1: '1080px',
-    laptop2: '1266px',
-    laptop3: '1500px',
+    laptop: '1080px',
+    laptop1: '1266px',
+    laptop2: '1500px',
+    laptop3: '1550px',
     laptop4: '1600px',
     laptop5: '1720px',
-
 
     high1: '1704px',
     high2: '1874px',
@@ -40,6 +41,7 @@ const breakpoints = {
 };
 
 export const devices = {
+    m: `( max-width: ${breakpoints.m} )`,
     m1: `( max-width: ${breakpoints.m1} )`,
     m2: `( max-width: ${breakpoints.m2} )`,
     m3: `( max-width: ${breakpoints.m3} )`,
@@ -55,6 +57,8 @@ export const devices = {
     laptop1: `( max-width: ${breakpoints.laptop1} )`,
     laptop2: `( max-width: ${breakpoints.laptop2} )`,
     laptop3: `( max-width: ${breakpoints.laptop3} )`,
+    laptop4: `( max-width: ${breakpoints.laptop4} )`,
+    laptop5: `( max-width: ${breakpoints.laptop5} )`,
     high: `( max-width: ${breakpoints.high} )`,
     high1: `( max-width: ${breakpoints.high} )`,
     high2: `( max-width: ${breakpoints.high2} )`
