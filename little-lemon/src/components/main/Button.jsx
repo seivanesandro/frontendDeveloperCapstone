@@ -18,6 +18,12 @@ const Btn = styled.button`
     background: ${({ backgroundText }) =>
         backgroundText};
 
+    &:hover {
+        cursor: pointer;
+        color: #f4ce14;
+        background: #495e57;
+    }
+
     @media only screen and (${devices.tablet2}) {
         padding: 0.4rem 3rem 0.4rem 3rem;
         font-weight: 700;

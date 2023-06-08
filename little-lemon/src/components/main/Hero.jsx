@@ -117,15 +117,17 @@ const HeroImgWrapper = styled.div`
 
     @media only screen and (${devices.m5}) {
         max-width: 140px;
-        max-height: 145px;
+        max-height: 125px;
         margin: 0 1rem 10rem 0;
     }
 `;
 
 const ImgHero = styled.img`
-    width: 250px;
+    width: 216px;
     box-shadow: 0 0 0.3rem black;
     border-radius: 6%;
+    position: relative;
+    z-index: 100;
 
     @media only screen and (${devices.tablet3}) {
         width: 140px;

@@ -28,6 +28,7 @@ const NavContainerStyle = styled.div`
     gap: 1rem;
     background: #fff;
     z-index: 0;
+    box-shadow: 0 0 0.3rem black;
 
     @media only screen and (${devices.m5}) {
         display: flex;
@@ -45,7 +46,7 @@ const NavMobile = styled.div`
         display: block;
         cursor: pointer;
         float: left;
-        z-index:100;
+        z-index:102;
     }
 `;
 
@@ -77,7 +78,7 @@ const NavContent = styled.nav`
         align-items: center;
         justify-content: center;
         background-color: #ffffff;
-        z-index: 99;
+        z-index: 101;
         position: absolute;
         top: 0;
         left: 0;
@@ -88,7 +89,7 @@ const NavContent = styled.nav`
         gap: 2rem;
 
         &.active {
-            height: 75%;
+            height: 125%;
             padding: 1em 2em;
         }
     }
@@ -198,7 +199,7 @@ function Nav() {
                         size={30}
                     />
                 ) : (
-                    <IoIosMenu size={20} />
+                    <IoIosMenu size={25} />
                 )}
             </NavMobile>
             <Logo src={logo} alt="logo" />

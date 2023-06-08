@@ -5,7 +5,7 @@ import { devices } from '../../constantes';
 import styled from 'styled-components';
 
 import Hero from './Hero';
-//import Menu from './Menu';
+import Menu from './Menu';
 //import Testimonials from './Testimonials';
 //import Description from './Description';
 
@@ -38,18 +38,26 @@ const MainHero = styled.section`
     } */
 `;
 
+const MainMenu = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 0.5rem 0 0.5rem 0;
+
+`;
 function Main(props) {
   return (
       <MainContainer
+          style={{background: 'tomato'}}
           className="main-sections"
-          style={{ background: 'lightcoral' }}
       >
           <MainHero className="Hero">
              <Hero />
           </MainHero>
-          <section className="main-menu">
-             menu
-          </section>
+          <MainMenu className="main-menu">
+             <Menu />
+          </MainMenu>
           <section className="main-testemonials">
              testemonials
           </section>

@@ -18,7 +18,7 @@ const AppContainer = styled.div`
     justify-items: none;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 0.5rem;
+    gap: 0.1rem;
 `;
 function App() {
   return (
