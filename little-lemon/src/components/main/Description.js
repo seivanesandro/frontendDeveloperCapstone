@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//FIXME:import PropTypes from 'prop-types'
 
 function Description(props) {
   return (

@@ -1,14 +1,21 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//FIXME:import PropTypes from 'prop-types'
+
+import photoHeader from '../../assets/restauranfood.jpg';
+
 
 function Hero(props) {
   return (
-    <>
-      Hero
-    </>
-  )
+        <>
+            
+        </>
+  );
 }
 
 Hero.propTypes = {}
 
 export default Hero
+
+
+
+
