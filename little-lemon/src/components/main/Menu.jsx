@@ -104,12 +104,13 @@ const MenuCard = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
     background: transparent;
-    gap: 2rem;
+    gap: 5rem;
 
     @media only screen and (${devices.laptop}) {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap:3rem;
     }
 
     @media only screen and (${devices.tablet3}) {
@@ -126,8 +127,8 @@ const MenuCard = styled.div`
 
 const Card = styled.div`
     display: flex;
-    align-items: flex-start;
-    padding: 2rem;
+    align-items: center;
+    padding: 1rem;
     border-radius: 6px;
     background-color: #fff;
     box-shadow: 0 0 0.4rem black;
@@ -141,8 +142,8 @@ const Card = styled.div`
 `;
 
 const CardHeadImg = styled.img`
-    width: 354px;
-    height: 185px;
+    width: 330px;
+    height: 175px;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
     display: flex;
@@ -152,11 +153,12 @@ const CardMain = styled.div`
     background: #fff;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     -webkit-box-align: center;
     align-items: center;
     width: 22em;
-    padding: 0.3rem;
+    padding: 1rem 0 0 0;
+    gap: 9rem;
 `;
 
 const CardItemName = styled.p`
@@ -180,7 +182,7 @@ const CardItemDescription = styled.div`
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
-    width: 22em;
+    width: 20em;
     padding: 0.3rem;
 `;
 
@@ -230,7 +232,6 @@ function Menu({order}) {
 
                 {/* card */}
                 <MenuCard className="menu-card">
-
                     {/* Greek Salad */}
                     <Card className="card">
                         <CardHeadImg
@@ -298,7 +299,10 @@ function Menu({order}) {
                                 garlic and
                                 seasoned with salt
                                 and olive oil.
-                                <br />{' '}
+                                <br />
+                                This events
+                                will give great
+                                moments of flavor{' '}
                             </Description>
                         </CardItemDescription>
                         <CardFooter className="card-footer">
@@ -353,7 +357,6 @@ function Menu({order}) {
                             </Delivery>
                         </CardFooter>
                     </Card>
-
                 </MenuCard>
             </MenuTitle>
         </>

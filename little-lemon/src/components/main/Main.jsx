@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 import Hero from './Hero';
 import Menu from './Menu';
-//import Testimonials from './Testimonials';
+import Testimonials from './Testimonials';
 //import Description from './Description';
 
 const MainContainer = styled.div`
@@ -23,19 +23,7 @@ const MainHero = styled.section`
     justify-content: space-around;
     align-items: center;
     background: #495e57;
-    padding: 3rem 0 0.5rem 0;
-
-   /*FIXME:
-    @media only screen and (${devices.laptop3}) {
-    }
-    @media only screen and (${devices.laptop1}) {
-    }
-    @media only screen and (${devices.tablet3}) {
-    }
-    @media only screen and (${devices.tablet2}) {
-    }
-    @media only screen and (${devices.m5}) {
-    } */
+    padding: 5rem 0 0.5rem 0;
 `;
 
 const MainMenu = styled.section`
@@ -43,8 +31,15 @@ const MainMenu = styled.section`
     flex-direction: column;
     align-items: center;
     background: #fff;
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 2rem 0 5rem 0;
+`;
 
+const MainTestemonials = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #495e57;
+    padding: 5rem 0 15rem 0;
 `;
 function Main(props) {
   return (
@@ -58,9 +53,9 @@ function Main(props) {
           <MainMenu className="main-menu">
              <Menu />
           </MainMenu>
-          <section className="main-testemonials">
-             testemonials
-          </section>
+          <MainTestemonials className="main-testemonials">
+             <Testimonials />
+          </MainTestemonials>
           <section className="main-description">
               description
           </section>
