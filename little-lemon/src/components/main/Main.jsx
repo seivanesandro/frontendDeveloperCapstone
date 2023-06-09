@@ -1,7 +1,6 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
-import { devices } from '../../constantes';
-
+//import { devices } from '../../constantes';
 import styled from 'styled-components';
 
 import Hero from './Hero';
@@ -17,7 +16,6 @@ const MainContainer = styled.div`
     grid-template-rows: auto;
     gap: 0.5rem;
 `;
-
 const MainHero = styled.section`
     display: flex;
     justify-content: space-around;
@@ -25,7 +23,6 @@ const MainHero = styled.section`
     background: #495e57;
     padding: 5rem 0 0.5rem 0;
 `;
-
 const MainMenu = styled.section`
     display: flex;
     flex-direction: column;
@@ -33,7 +30,6 @@ const MainMenu = styled.section`
     background: #fff;
     padding: 2rem 0 5rem 0;
 `;
-
 const MainTestemonials = styled.section`
     display: flex;
     flex-direction: column;

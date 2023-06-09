@@ -128,7 +128,8 @@ const MenuCard = styled.div`
 const Card = styled.div`
     display: flex;
     align-items: center;
-    padding: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
     border-radius: 6px;
     background-color: #fff;
     box-shadow: 0 0 0.4rem black;
