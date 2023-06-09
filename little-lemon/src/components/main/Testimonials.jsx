@@ -20,7 +20,7 @@ const TestemonialsStyled = styled.div`
     @media only screen and (${devices.laptop}) {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 3rem;
     }
     @media only screen and (${devices.laptop3}) {
     }
@@ -73,6 +73,19 @@ const TestemonialRating = styled.p`
     padding: 1rem 0.5rem;
     background: #fff;
     border-bottom: 1px solid lightgray;
+
+    @media only screen and (${devices.tablet2}) {
+        justify-content: center;
+    }
+    @media only screen and (${devices.tablet1}) {
+        justify-content: center;
+    }
+    @media only screen and (${devices.m5}) {
+        justify-content: center;
+    }
+    @media only screen and (${devices.m3}) {
+        justify-content: center;
+    }
 `;
 const TestemonialMain = styled.div`
     display: flex;
@@ -83,6 +96,18 @@ const TestemonialMain = styled.div`
     padding: 1rem;
     background-color: #fff;
 
+    @media only screen and (${devices.tablet2}) {
+        justify-content: center;
+    }
+    @media only screen and (${devices.tablet1}) {
+        justify-content: center;
+    }
+    @media only screen and (${devices.m5}) {
+        justify-content: center;
+    }
+    @media only screen and (${devices.m3}) {
+        justify-content: center;
+    }
 `;
 const TestemonialImg = styled.img`
     width: 121px;
@@ -114,138 +139,136 @@ const TestemonialComments = styled.p`
 function Testimonials(props) {
   return (
       <>
-        <TestemonialsTitle className="testimonials-title">
-            <label>Testimonials</label>
-        </TestemonialsTitle>
-        <TestemonialsStyled className="testimonials-container">
-            <TestemonialsCard className="testimonials-card">
-                <TestemonialContainer className="testimonial-container">
-                    <TestemonialRating className="testimonial-rating">
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                    </TestemonialRating>
-                    <TestemonialMain className="testimonial-main">
-                        <TestemonialImg
-                            className="testimonial-img"
-                            src={Lily}
-                            alt="greek salad"
-                        />
+          <TestemonialsTitle className="testimonials-title">
+              <label>Testimonials</label>
+          </TestemonialsTitle>
+          <TestemonialsStyled className="testimonials-container">
+              <TestemonialsCard className="testimonials-card">
+                  <TestemonialContainer className="testimonial-container">
+                      <TestemonialRating className="testimonial-rating">
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                      </TestemonialRating>
+                      <TestemonialMain className="testimonial-main">
+                          <TestemonialImg
+                              className="testimonial-img"
+                              src={Lily}
+                              alt="greek salad"
+                          />
 
-                        <TestemonialName className="testimonial-name">
-                            Lily
-                        </TestemonialName>
-                    </TestemonialMain>
-                    <TestemonialFooter className="testimonial-footer">
-                        <TestemonialComments className="testimonial-comments">
-                            "The best place i've
-                            eaten since 2020
-                            <br />
-                            Great and best
-                            tastiet food".{' '}
-                        </TestemonialComments>
-                    </TestemonialFooter>
-                </TestemonialContainer>
-            </TestemonialsCard>
+                          <TestemonialName className="testimonial-name">
+                              Lily
+                          </TestemonialName>
+                      </TestemonialMain>
+                      <TestemonialFooter className="testimonial-footer">
+                          <TestemonialComments className="testimonial-comments">
+                              "The best place i've
+                              eaten since 2020
+                              Great and best
+                              tastiet food".{' '}
+                              <br />
+                          </TestemonialComments>
+                      </TestemonialFooter>
+                  </TestemonialContainer>
+              </TestemonialsCard>
 
-            <TestemonialsCard className="testimonials-card">
-                <TestemonialContainer className="testimonial-container">
-                    <TestemonialRating className="testimonial-rating">
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                    </TestemonialRating>
-                    <TestemonialMain className="testimonial-main">
-                        <TestemonialImg
-                            className="testimonial-img"
-                            src={Anna}
-                            alt="Anna"
-                        />
-                        <TestemonialName className="testimonial-name">
-                            Anna
-                        </TestemonialName>
-                    </TestemonialMain>
-                    <TestemonialFooter className="testimonial-footer">
-                        <TestemonialComments className="testimonial-comments">
-                            "love coming to
-                            restaurant for
-                            dinner
-                            <br />
-                            is very skilled &
-                            professional"{' '}
-                        </TestemonialComments>
-                    </TestemonialFooter>
-                </TestemonialContainer>
-            </TestemonialsCard>
+              <TestemonialsCard className="testimonials-card">
+                  <TestemonialContainer className="testimonial-container">
+                      <TestemonialRating className="testimonial-rating">
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                      </TestemonialRating>
+                      <TestemonialMain className="testimonial-main">
+                          <TestemonialImg
+                              className="testimonial-img"
+                              src={Anna}
+                              alt="Anna"
+                          />
+                          <TestemonialName className="testimonial-name">
+                              Anna
+                          </TestemonialName>
+                      </TestemonialMain>
+                      <TestemonialFooter className="testimonial-footer">
+                          <TestemonialComments className="testimonial-comments">
+                              "love coming to
+                              restaurant for
+                              dinneris very
+                              skilled &
+                              professional" <br />
+                          </TestemonialComments>
+                      </TestemonialFooter>
+                  </TestemonialContainer>
+              </TestemonialsCard>
 
-            <TestemonialsCard className="testimonials-card">
-                <TestemonialContainer className="testimonial-container">
-                    <TestemonialRating className="testimonial-rating">
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                    </TestemonialRating>
-                    <TestemonialMain className="testimonial-main">
-                        <TestemonialImg
-                            className="testimonial-img"
-                            src={Trump}
-                            alt="Trump"
-                        />
+              <TestemonialsCard className="testimonials-card">
+                  <TestemonialContainer className="testimonial-container">
+                      <TestemonialRating className="testimonial-rating">
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                      </TestemonialRating>
+                      <TestemonialMain className="testimonial-main">
+                          <TestemonialImg
+                              className="testimonial-img"
+                              src={Trump}
+                              alt="Trump"
+                          />
 
-                        <TestemonialName className="testimonial-name">
-                            Trump
-                        </TestemonialName>
-                    </TestemonialMain>
-                    <TestemonialFooter className="testimonial-footer">
-                        <TestemonialComments className="testimonial-comments">
-                            "The best Restaurant
-                            in USA!!
-                            <br />I did love the
-                            wine and Italian
-                            Foods."{' '}
-                        </TestemonialComments>
-                    </TestemonialFooter>
-                </TestemonialContainer>
-            </TestemonialsCard>
+                          <TestemonialName className="testimonial-name">
+                              Trump
+                          </TestemonialName>
+                      </TestemonialMain>
+                      <TestemonialFooter className="testimonial-footer">
+                          <TestemonialComments className="testimonial-comments">
+                              "The best Restaurant
+                              in USA!! I did love
+                              the wine and Italian
+                              Foods." <br />
+                          </TestemonialComments>
+                      </TestemonialFooter>
+                  </TestemonialContainer>
+              </TestemonialsCard>
 
-            <TestemonialsCard className="testimonials-card">
-                <TestemonialContainer className="testimonial-container">
-                    <TestemonialRating className="testimonial-rating">
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                        <IoIosStar size={40} />
-                    </TestemonialRating>
-                    <TestemonialMain className="testimonial-main">
-                        <TestemonialImg
-                            className="testimonial-img"
-                            src={John}
-                            alt="John"
-                        />
+              <TestemonialsCard className="testimonials-card">
+                  <TestemonialContainer className="testimonial-container">
+                      <TestemonialRating className="testimonial-rating">
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                          <IoIosStar size={40} />
+                      </TestemonialRating>
+                      <TestemonialMain className="testimonial-main">
+                          <TestemonialImg
+                              className="testimonial-img"
+                              src={John}
+                              alt="John"
+                          />
 
-                        <TestemonialName className="testimonial-name">
-                            John
-                        </TestemonialName>
-                    </TestemonialMain>
-                    <TestemonialFooter className="testimonial-footer">
-                        <TestemonialComments className="testimonial-comments">
-                            "Little is
-                            of another planet!!
-                            <br />Great Service and
-                            the quality of
-                            food!"{' '}
-                        </TestemonialComments>
-                    </TestemonialFooter>
-                </TestemonialContainer>
-            </TestemonialsCard>
-        </TestemonialsStyled>
+                          <TestemonialName className="testimonial-name">
+                              John
+                          </TestemonialName>
+                      </TestemonialMain>
+                      <TestemonialFooter className="testimonial-footer">
+                          <TestemonialComments className="testimonial-comments">
+                              "Little is of
+                              another planet!!
+                              Great Service and
+                              the quality of
+                              food!" <br />
+                          </TestemonialComments>
+                      </TestemonialFooter>
+                  </TestemonialContainer>
+              </TestemonialsCard>
+          </TestemonialsStyled>
       </>
   );
 }

@@ -98,7 +98,7 @@ const HeroDescription = styled.p`
 `;
 
 const HeroImgWrapper = styled.div`
-    max-width: 250px;
+    max-width: 280px;
     max-height: 245px;
     align-self: flex-end;
     margin-bottom: 1rem;
@@ -123,7 +123,7 @@ const HeroImgWrapper = styled.div`
 `;
 
 const ImgHero = styled.img`
-    width: 216px;
+    width: 236px;
     box-shadow: 0 0 0.3rem black;
     border-radius: 6%;
     position: relative;

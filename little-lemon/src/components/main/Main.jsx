@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Hero from './Hero';
 import Menu from './Menu';
 import Testimonials from './Testimonials';
-//import Description from './Description';
+import Description from './Description';
 
 const MainContainer = styled.div`
     display: grid;
@@ -37,6 +37,13 @@ const MainTestemonials = styled.section`
     background: #495e57;
     padding: 5rem 0 15rem 0;
 `;
+const MainDescription = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 8rem 0 8rem 0;
+`;
 function Main(props) {
   return (
       <MainContainer
@@ -52,9 +59,9 @@ function Main(props) {
           <MainTestemonials className="main-testemonials">
              <Testimonials />
           </MainTestemonials>
-          <section className="main-description">
-              description
-          </section>
+          <MainDescription className="main-description">
+              <Description />
+          </MainDescription>
       </MainContainer>
   );
 }

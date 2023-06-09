@@ -16,7 +16,7 @@ const Menudescription = styled.div`
     justify-content: flex-start;
     -webkit-box-align: baseline;
     align-items: baseline;
-    gap: 24.5rem;
+    gap: 12.5rem;
     margin: 5rem 10px;
 
     @media only screen and (${devices.laptop}) {
@@ -58,7 +58,7 @@ const Menudescription = styled.div`
     }
 `;
 
-const Title = styled.p`
+const MenuTitle = styled.p`
     font-family: 'Markazi Text', serif;
     font-size: 64px;
     font-weight: 500;
@@ -90,10 +90,6 @@ const Title = styled.p`
         letter-spacing: 0em;
         font-size: 25px;
     }
-`;
-
-const MenuTitle = styled.p`
-    padding-block: 2em;
 `;
 
 const MenuBtn = styled(Button)``;
@@ -193,20 +189,18 @@ const Description = styled.p`
     font-weight: 500;
     color: #000000;
 `;
-
 const CardFooter = styled.div`
     background: #fff;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     -webkit-box-align: center;
     align-items: center;
     width: 22em;
     padding: 0.3rem;
 `;
-
 const Delivery = styled.p`
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Karla', sans-serif;
     font-weight: 500;
     color: #000000;
@@ -215,151 +209,148 @@ const Delivery = styled.p`
         color: #495e57;
     }
 `;
-
 function Menu({order}) {
     return (
         <>
-            {/* menu */}
-            <MenuTitle className="menu">
-                <Menudescription className="menu-description">
-                    <Title className="title menu-title">
-                        This weeks specials!
-                    </Title>
-                    <MenuBtn
-                        className="btn"
-                        name={order}
+            <Menudescription className="menu-description">
+                <MenuTitle className="title menu-title">
+                    This weeks specials!
+                </MenuTitle>
+                <MenuBtn
+                    className="btn"
+                    name={order}
+                />
+            </Menudescription>
+            <MenuCard className="menu-card">
+                <Card className="card">
+                    <CardHeadImg
+                        className="card-head"
+                        src={greekSalad}
+                        alt="greek salad"
                     />
-                </Menudescription>
+                    <CardMain className="card-main">
+                        <CardItemName className="card-item-name">
+                            Greek Salad
+                        </CardItemName>
+                        <CardItemPrice className="card-item-price">
+                            $12.99
+                        </CardItemPrice>
+                    </CardMain>
+                    <CardItemDescription className="card-item-description">
+                        <Description className="description">
+                            The famous greek
+                            salad of crispy
+                            lettuce, peppers,
+                            <br />
+                            olives and our
+                            Chicago style feta
+                            cheese,
+                            <br /> garnished
+                            with crunchy
+                            garlic and
+                            <br />
+                            rosemary croutons.{' '}
+                        </Description>
+                    </CardItemDescription>
+                    <CardFooter className="card-footer">
+                        <label>
+                            <IoIosCard
+                                size={28}
+                            />
+                        </label>
+                        <Delivery className="delivery">
+                            <br />
+                            {''}Order a
+                            delivery
+                        </Delivery>
+                    </CardFooter>
+                </Card>
 
-                {/* card */}
-                <MenuCard className="menu-card">
-                    {/* Greek Salad */}
-                    <Card className="card">
-                        <CardHeadImg
-                            className="card-head"
-                            src={greekSalad}
-                            alt="greek salad"
-                        />
-                        <CardMain className="card-main">
-                            <CardItemName className="card-item-name">
-                                Greek Salad
-                            </CardItemName>
-                            <CardItemPrice className="card-item-price">
-                                $12.99
-                            </CardItemPrice>
-                        </CardMain>
-                        <CardItemDescription className="card-item-description">
-                            <Description className="description">
-                                The famous greek
-                                salad of crispy
-                                lettuce, peppers,
-                                <br />
-                                olives and our
-                                Chicago style feta
-                                cheese,
-                                <br /> garnished
-                                with crunchy
-                                garlic and
-                                <br />
-                                rosemary croutons.{' '}
-                            </Description>
-                        </CardItemDescription>
-                        <CardFooter className="card-footer">
-                            <Delivery className="delivery">
-                                <IoIosCard
-                                    size={28}
-                                />
-                                {''}Order a
-                                delivery
-                            </Delivery>
-                        </CardFooter>
-                    </Card>
+                <Card className="card">
+                    <CardHeadImg
+                        className="card-head"
+                        src={bruchetta}
+                        alt="bruchetta"
+                    />
+                    <CardMain className="card-main">
+                        <CardItemName className="card-item-name">
+                            Bruchetta
+                        </CardItemName>
+                        <CardItemPrice className="card-item-price">
+                            $11.99
+                        </CardItemPrice>
+                    </CardMain>
+                    <CardItemDescription className="card-item-description">
+                        <Description className="description">
+                            <br />
+                            Our Bruschetta is
+                            made from grilled
+                            bread that has
+                            been smeared with
+                            garlic and
+                            seasoned with salt
+                            and olive oil.
+                            <br />
+                            This events will
+                            give great moments
+                            of flavor{' '}
+                        </Description>
+                    </CardItemDescription>
+                    <CardFooter className="card-footer">
+                        <label>
+                            <IoIosCard
+                                size={28}
+                            />
+                        </label>
+                        <Delivery className="delivery">
+                            <br />
+                            {''}Order a
+                            delivery
+                        </Delivery>
+                    </CardFooter>
+                </Card>
 
-                    {/*bruchetta */}
-                    <Card className="card">
-                        <CardHeadImg
-                            className="card-head"
-                            src={bruchetta}
-                            alt="bruchetta"
-                        />
-                        <CardMain className="card-main">
-                            <CardItemName className="card-item-name">
-                                Bruchetta
-                            </CardItemName>
-                            <CardItemPrice className="card-item-price">
-                                $11.99
-                            </CardItemPrice>
-                        </CardMain>
-                        <CardItemDescription className="card-item-description">
-                            <Description className="description">
-                                <br />
-                                Our Bruschetta is
-                                made from grilled
-                                bread that has
-                                been smeared with
-                                garlic and
-                                seasoned with salt
-                                and olive oil.
-                                <br />
-                                This events
-                                will give great
-                                moments of flavor{' '}
-                            </Description>
-                        </CardItemDescription>
-                        <CardFooter className="card-footer">
-                            <Delivery className="delivery">
-                                <IoIosCard
-                                    size={28}
-                                />
-                                {''}Order a
-                                delivery
-                            </Delivery>
-                        </CardFooter>
-                    </Card>
-
-                    {/* lemon-dessert */}
-                    <Card className="card">
-                        <CardHeadImg
-                            className="card-head"
-                            src={lemonDessert}
-                            alt="lemon-dessert"
-                        />
-
-                        <CardMain className="card-main">
-                            <CardItemName className="card-item-name">
-                                Lemon-dessert
-                            </CardItemName>
-                            <CardItemPrice className="card-item-price">
-                                $10.99
-                            </CardItemPrice>
-                        </CardMain>
-
-                        <CardItemDescription className="card-item-description">
-                            <Description className="description">
-                                <br />
-                                His comes straight
-                                from grandma’s
-                                recipe book,
-                                <br /> every last
-                                ingredient has
-                                been sourced and
-                                is as authentic as
-                                can be imagined.{' '}
-                            </Description>
-                        </CardItemDescription>
-
-                        <CardFooter className="card-footer">
-                            <Delivery className="delivery">
-                                <IoIosCard
-                                    size={28}
-                                />
-                                {''}Order a
-                                delivery
-                            </Delivery>
-                        </CardFooter>
-                    </Card>
-                </MenuCard>
-            </MenuTitle>
+                <Card className="card">
+                    <CardHeadImg
+                        className="card-head"
+                        src={lemonDessert}
+                        alt="lemon-dessert"
+                    />
+                    <CardMain className="card-main">
+                        <CardItemName className="card-item-name">
+                            Lemon-dessert
+                        </CardItemName>
+                        <CardItemPrice className="card-item-price">
+                            $10.99
+                        </CardItemPrice>
+                    </CardMain>
+                    <CardItemDescription className="card-item-description">
+                        <Description className="description">
+                            <br />
+                            His comes straight
+                            from grandma’s
+                            recipe book,
+                            <br /> every last
+                            ingredient has
+                            been sourced and
+                            is as authentic as
+                            can be imagined.{' '}
+                        </Description>
+                    </CardItemDescription>
+                    <CardFooter className="card-footer">
+                        <label>
+                            <IoIosCard
+                                size={28}
+                            />
+                        </label>
+                        <Delivery className="delivery">
+                            <br />
+                            {''}Order a
+                            delivery
+                        </Delivery>
+                    </CardFooter>
+                </Card>
+            </MenuCard>
         </>
     );
 }

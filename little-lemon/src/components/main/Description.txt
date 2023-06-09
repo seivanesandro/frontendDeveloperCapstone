@@ -1,5 +1,5 @@
 export default function Description() {
-
+color: #F4CE14;
     return (
       <>
         <div className="restaurant-desc-parent">
@@ -16,4 +16,33 @@ export default function Description() {
   }
   
 
-  
+  .restaurant-desc-parent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-block: 2em;
+	gap: 2em;
+}
+
+.hero-desc,
+	.restaurant-desc {
+		padding: 1em;
+	}
+
+.desc-title {
+	color: #000000;
+}
+
+.desc-subtitle {
+	color: #333333;
+}
+
+desc-text {
+	font-family: Karla;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 23px;
+	letter-spacing: 0em;
+	text-align: justified;
+	color: #000000;
+}

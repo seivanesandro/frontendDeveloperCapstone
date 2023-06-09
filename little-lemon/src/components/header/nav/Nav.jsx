@@ -89,7 +89,7 @@ const NavContent = styled.nav`
         gap: 2rem;
 
         &.active {
-            height: 125%;
+            height: 75%;
             padding: 1em 2em;
         }
     }
