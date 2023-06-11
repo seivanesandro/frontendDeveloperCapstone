@@ -2,10 +2,8 @@ import React from 'react'
 //FIXME:import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
-import { devices } from '../../constantes';
+import { devices } from '../../utilities/constantes';
 import Hero from '../../assets/hero.png';
-
-
 
 const DescriptionContainer = styled.div`
     background: #f4ce14;
@@ -32,6 +30,7 @@ const DescriptionContainer = styled.div`
     @media only screen and (${devices.m3}) {
     }
 `;
+
 const DescriptionStyle = styled.div`
     padding-block: 1rem;
     display: flex;
@@ -39,6 +38,7 @@ const DescriptionStyle = styled.div`
     align-items: flex-start;
     padding: 1rem;
 `;
+
 const DescriptionTitle = styled.p`
     font-size: 64px;
     font-family: 'Markazi Text', serif;
@@ -66,6 +66,7 @@ const DescriptionTitle = styled.p`
         line-height: 25px;
     }
 `;
+
 const DescriptionSubTitle = styled.p`
     font-size: 48px;
     font-family: 'Markazi Text', serif;
@@ -92,6 +93,7 @@ const DescriptionSubTitle = styled.p`
         line-height: 25px;
     }
 `;
+
 const DescriptionText = styled.p`
     font-size: 18px;
     font-family: 'Karla', sans-serif;
@@ -117,6 +119,7 @@ const DescriptionText = styled.p`
         line-height: 20px;
     }
 `;
+
 const DescriptionImgContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -125,6 +128,7 @@ const DescriptionImgContainer = styled.div`
     margin: 5em;
     background: transparent;
 `;
+
 const DescriptionImg = styled.img`
     position: absolute;
     display: flex;
@@ -152,12 +156,11 @@ const DescriptionImg = styled.img`
     @media only screen and (${devices.m3}) {
     }
 `;
-
 function Description(props) {
   return (
       <>
           <DescriptionContainer className="description-container">
-           
+
               <DescriptionStyle className="description">
                   <DescriptionTitle className="description-title">
                       Little Lemon
@@ -175,7 +178,7 @@ function Description(props) {
                       twist.
                   </DescriptionText>
               </DescriptionStyle>
-            
+
               <DescriptionImgContainer className="descripton-img-container">
                   <DescriptionImg
                       className="descripton-img"

@@ -2,7 +2,7 @@ import React from 'react'
 //FIXME:import PropTypes from 'prop-types'
 import styled from 'styled-components';
 
-import { devices } from '../../constantes';
+import { devices } from '../../utilities/constantes';
 import { IoIosStar } from 'react-icons/io';
 import Lily from '../../assets/lily.jpg';
 import Anna from '../../assets/anna.jpg';

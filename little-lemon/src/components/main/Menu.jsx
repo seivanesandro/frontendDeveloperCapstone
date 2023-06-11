@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components';
 
-import Button from './Button';
-import { devices } from '../../constantes';
+import Button from '../commons/Button';
+import { devices } from '../../utilities/constantes';
 import greekSalad from '../../assets/greek-salad.png';
 import bruchetta from '../../assets/bruchetta.PNG';
 import lemonDessert from '../../assets/lemon-dessert.jpg';
@@ -57,7 +57,6 @@ const Menudescription = styled.div`
         align-items: center;
     }
 `;
-
 const MenuTitle = styled.p`
     font-family: 'Markazi Text', serif;
     font-size: 64px;
@@ -91,9 +90,8 @@ const MenuTitle = styled.p`
         font-size: 25px;
     }
 `;
-
-const MenuBtn = styled(Button)``;
-
+const MenuBtn = styled(Button)`
+`;
 const MenuCard = styled.div`
     display: flex;
     -webkit-box-align: center;
@@ -120,7 +118,6 @@ const MenuCard = styled.div`
         align-items: center;
     }
 `;
-
 const Card = styled.div`
     display: flex;
     align-items: center;
@@ -137,7 +134,6 @@ const Card = styled.div`
         padding: 0.5rem;
     }
 `;
-
 const CardHeadImg = styled.img`
     width: 330px;
     height: 175px;
@@ -145,7 +141,6 @@ const CardHeadImg = styled.img`
     border-bottom-left-radius: 6px;
     display: flex;
 `;
-
 const CardMain = styled.div`
     background: #fff;
     display: flex;
@@ -157,21 +152,18 @@ const CardMain = styled.div`
     padding: 1rem 0 0 0;
     gap: 9rem;
 `;
-
 const CardItemName = styled.p`
     font-size: 18px;
     font-family: 'Karla', sans-serif;
     font-weight: 600;
     color: #495e57;
 `;
-
 const CardItemPrice = styled.p`
     font-size: 18px;
     font-family: 'Karla', sans-serif;
     font-weight: 600;
     color: #000000;
 `;
-
 const CardItemDescription = styled.div`
     background: #fff;
     display: flex;
@@ -182,7 +174,6 @@ const CardItemDescription = styled.div`
     width: 20em;
     padding: 0.3rem;
 `;
-
 const Description = styled.p`
     font-size: 15px;
     font-family: 'Karla', sans-serif;

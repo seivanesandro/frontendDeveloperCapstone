@@ -1,19 +1,13 @@
 import React from 'react'
-//FIXME:import PropTypes from 'prop-types'
-
 import Nav from './nav/Nav';
 
 
-
-//FIXME:
-function Header(props) {
+function Header() {
   return (
       <header className='header'>
         <Nav />
       </header>
   );
 }
-
-Header.propTypes = {}
 
 export default Header

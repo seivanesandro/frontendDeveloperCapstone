@@ -5,7 +5,7 @@ import Header from './components/header/Header';
 import HomePage from './pages/HomePage';
 import Footer from  './components/footer/Footer';
 
-import BookingPage from './pages/BookingPage';
+//import BookingPage from './pages/BookingPage';
 
 //import ComfirmedBooking from './pages/ConfirmedBooking';
 //import {  Route,  Routes } from "react-router-dom"
@@ -19,14 +19,20 @@ const AppContainer = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 0.1rem;
-`;
+`; 
+
 function App() {
   return (
-      <AppContainer className='App-Container'>
+      <AppContainer className="App-Container">
           <Header />
-          <HomePage />
+          {/* <HomePage />
           <BookingPage />
           <div>ComfirmedBooking</div>
+           */}
+           <HomePage />
+          <div>BookingPage</div>
+          <div>ComfirmedBooking</div>
+
           <Footer />
       </AppContainer>
   );
