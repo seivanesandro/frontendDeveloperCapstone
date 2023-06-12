@@ -20,7 +20,7 @@ import restaurantChefB from '../assets/restaurant-chef-b.jpg';
 import restaurant from '../assets/restaurant.jpg';
 import restaurantFood from '../assets/restaurant-food.jpg';
 
-export  {
+export {
     anna,
     jonh,
     lily,

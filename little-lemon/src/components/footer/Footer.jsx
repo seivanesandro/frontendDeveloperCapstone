@@ -80,7 +80,7 @@ function Footer () {
                   <div className="social-media-icons-container mt-1">
                       <a
                           href="/"
-                          className="me-4 px-3 text-reset icons-container"
+                          className="me-1 px-4 text-reset icons-container"
                       >
                           <IconsSocialMediaStyle
                               fab
@@ -91,7 +91,7 @@ function Footer () {
 
                       <a
                           href="/"
-                          className="me-4 px-3 text-reset"
+                          className="me-1 px-4 text-reset"
                       >
                           <IconsSocialMediaStyle
                               fab
@@ -102,7 +102,7 @@ function Footer () {
 
                       <a
                           href="/"
-                          className="me-4 px-3 text-reset"
+                          className="me-1 px-4 text-reset"
                       >
                           <IconsSocialMediaStyle
                               fab
@@ -117,9 +117,9 @@ function Footer () {
                   <FooterMainContainer className="text-center text-md-start p-3 footer-main-container">
                       <MDBRow className="mt-1">
                           <MDBCol
-                              md="3"
-                              lg="4"
-                              xl="3"
+                              md="1"
+                              lg="1"
+                              xl="1"
                               className="mx-auto mb-4"
                           >
                               <Img
@@ -129,9 +129,9 @@ function Footer () {
                           </MDBCol>
 
                           <MDBCol
-                              md="2"
-                              lg="2"
-                              xl="2"
+                              md="1"
+                              lg="1"
+                              xl="1"
                               className="mx-auto mb-4"
                           >
                               <FooterTitle className="text-uppercase fw-bold mb-4 ">
@@ -194,9 +194,9 @@ function Footer () {
                           </MDBCol>
 
                           <MDBCol
-                              md="4"
-                              lg="3"
-                              xl="3"
+                              md="1"
+                              lg="1"
+                              xl="1"
                               className="mx-auto mb-md-0 mb-4"
                           >
                               <FooterTitle className="text-uppercase fw-bold mb-4">
@@ -206,7 +206,7 @@ function Footer () {
                               <FooterText>
                                   <MDBIcon
                                       icon="home"
-                                      className="me-2"
+                                      className="me-3"
                                   />
                                   Chicago, 10012,
                                   US
@@ -240,7 +240,7 @@ function Footer () {
                   </FooterMainContainer>
               </section>
 
-              <FooterBoottom className="text-center p-4 footer-boottom">
+              <FooterBoottom className="text-center p-1 footer-boottom">
                   <CopyrightFooter
                       className="copyright-footer"
                       href="#"

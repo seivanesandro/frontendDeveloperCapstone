@@ -19,13 +19,13 @@ export const colorsSpecials = {
 //TODO:FONT-Family
 export const fontFamily = {
     markazi: '"Markazi Text" , serif',
-    karla: '"Karla" , sans-serif'
+    karla: '"Karla" , serif'
 };
 
 //TODO:FONT-SIZES
 export const fontSize = {
-    small: '18px',
-    medium: '40px',
+    small: '28px',
+    medium: '48px',
     large: '64px'
 };
 
@@ -57,6 +57,9 @@ export const sizes = {
 };
 //TODO:BORDER-RADIUS
 export const borderRadius = {
+    smalls: '6%',
+    mediums: '10%',
+    larger: '16%',
     small: '6rem',
     medium: '10rem',
     large: '16rem'
@@ -64,9 +67,9 @@ export const borderRadius = {
 
 //TODO:TEXT-SHADOW
 export const textShadow = {
-    small: '0 0 0 0.2rem black',
-    medium: '0 0 0 0.4rem black',
-    large: '0 0 0 0.8rem black'
+    small: '1px 0 3px gold, 1px 0 1px #fff',
+    medium: '1px 0 5px gold, 1px 0 2px #fff',
+    large: '1px 0 6px gold, 1px 0 3px #fff'
 };
 
 //TODO:BOX-SHADOW
@@ -76,17 +79,12 @@ export const boxShadow = {
     large: '0 0 0.8rem black'
 };
 
-////TODO:SHADOW-Function
-export const shadow = ({
-    firstValue= 0,
-    secondValue= 0,
-    thirdValue= '0.3rem',
-    color= 'black'
-}) => {
-    return `
-            ${firstValue}
-            ${secondValue}
-            ${thirdValue}rem
-            ${color}
-            `;
+//TODO:BOX-SHADOW
+export const boxShadowSpecial = {
+    small: '0 0 0.2rem greenyellow',
+    medium: '0 0 0.4rem greenyellow',
+    large: '0 0 0.8rem greenyellow',
+    smalls: '0 0 0.2rem coral',
+    mediums: '0 0 0.4rem coral',
+    larges: '0 0 0.8rem coral'
 };

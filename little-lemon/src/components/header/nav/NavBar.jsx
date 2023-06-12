@@ -55,7 +55,7 @@ export default function NavBar({
                 expand="xl"
                 light
                 bgColor="light"
-                className="navBar fixed-top p-2 border border-0 rounded-5 shadow"
+                className="navBar fixed-top p-2 border border-0 shadow"
             >
                 <MDBContainer fluid  className='px-5'>
                     <MDBNavbarBrand
@@ -91,7 +91,7 @@ export default function NavBar({
                         center
                         id="navbarCenteredExample"
                     >
-                        <MDBNavbarNav className="mr-auto px-5 mb-2 mb-lg-0">
+                        <MDBNavbarNav className="mr-auto px-5 mb-2 mb-lg-0 g-2">
                             <MDBNavbarItem className="px-5">
                                 <MDBNavbarLink
                                     active

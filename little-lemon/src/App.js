@@ -25,11 +25,12 @@ function App() {
   return (
       <AppContainer className="App-Container">
           <Header />
-          {/* <HomePage />
+          {/* 
+             
           <BookingPage />
           <div>ComfirmedBooking</div>
            */}
-           <HomePage />
+          <HomePage />
           <div>BookingPage</div>
           <div>ComfirmedBooking</div>
 

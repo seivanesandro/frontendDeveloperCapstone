@@ -1,12 +1,14 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
-//import { devices } from '../../constantes';
-import styled from 'styled-components';
 
-import Hero from './Hero';
-import Menu from './Menu';
-import Testimonials from './Testimonials';
-import Description from './Description';
+//import PropTypes from 'prop-types';
+
+import styled from 'styled-components';
+//import { devices } from '../../utilities/constantes';
+
+import Hero from './hero/Hero';
+import Menu from './menu/Menu';
+import Testimonials from './testimonials/Testimonials';
+//import Description from './Description';
 
 const MainContainer = styled.div`
     display: grid;
@@ -16,20 +18,32 @@ const MainContainer = styled.div`
     grid-template-rows: auto;
     gap: 0.5rem;
 `;
+
 const MainHero = styled.section`
     display: flex;
-    justify-content: space-around;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    background: rgb(73, 94, 87);
+    padding: 7rem 0px 0px;
+    z-index: 0;
+    flex-direction: row;
+    /* align-content: center; */
+    justify-content: center;
     align-items: center;
-    background: #495e57;
-    padding: 5rem 0 0.5rem 0;
+    padding: 5rem 1rem 1rem 1rem;
 `;
+
 const MainMenu = styled.section`
     display: flex;
-    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    background: rgb(255, 255, 255);
+    padding: 5rem 5rem 10rem;
+    gap: 20rem;
     align-items: center;
-    background: #fff;
-    padding: 2rem 0 5rem 0;
 `;
+
 const MainTestemonials = styled.section`
     display: flex;
     flex-direction: column;
@@ -37,35 +51,38 @@ const MainTestemonials = styled.section`
     background: #495e57;
     padding: 5rem 0 15rem 0;
 `;
-const MainDescription = styled.section`
+
+/* const MainDescription = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
     background: white;
     padding: 8rem 0 8rem 0;
-`;
+`; */
+
 function Main(props) {
   return (
       <MainContainer
-          style={{background: 'tomato'}}
+          style={{ background: 'tomato' }}
           className="main-sections"
       >
           <MainHero className="Hero">
-             <Hero />
+              <Hero />
           </MainHero>
           <MainMenu className="main-menu">
-             <Menu />
+              <Menu />
           </MainMenu>
           <MainTestemonials className="main-testemonials">
-             <Testimonials />
+              <Testimonials />
           </MainTestemonials>
+          {/*
           <MainDescription className="main-description">
               <Description />
-          </MainDescription>
+          </MainDescription> */}
       </MainContainer>
   );
 }
 
-Main.propTypes = {}
+//Main.propTypes = {}
 
 export default Main
