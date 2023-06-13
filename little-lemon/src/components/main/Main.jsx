@@ -1,14 +1,11 @@
 import React from 'react';
-
-//import PropTypes from 'prop-types';
-
 import styled from 'styled-components';
 //import { devices } from '../../utilities/constantes';
 
 import Hero from './hero/Hero';
 import Menu from './menu/Menu';
 import Testimonials from './testimonials/Testimonials';
-//import Description from './Description';
+import Description from './description/Description';
 
 const MainContainer = styled.div`
     display: grid;
@@ -16,7 +13,6 @@ const MainContainer = styled.div`
     justify-items: none;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 0.5rem;
 `;
 
 const MainHero = styled.section`
@@ -27,7 +23,6 @@ const MainHero = styled.section`
     padding: 7rem 0px 0px;
     z-index: 0;
     flex-direction: row;
-    /* align-content: center; */
     justify-content: center;
     align-items: center;
     padding: 5rem 1rem 1rem 1rem;
@@ -38,7 +33,7 @@ const MainMenu = styled.section`
     -webkit-box-pack: center;
     justify-content: center;
     -webkit-box-align: stretch;
-    background: rgb(255, 255, 255);
+    background: #F4CE14;
     padding: 5rem 5rem 10rem;
     gap: 20rem;
     align-items: center;
@@ -52,18 +47,18 @@ const MainTestemonials = styled.section`
     padding: 5rem 0 15rem 0;
 `;
 
-/* const MainDescription = styled.section`
+const MainDescription = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
     background: white;
-    padding: 8rem 0 8rem 0;
-`; */
+    padding: 8rem 0 10rem 0;
+    background: #F4CE14;
+`;
 
 function Main(props) {
   return (
       <MainContainer
-          style={{ background: 'tomato' }}
           className="main-sections"
       >
           <MainHero className="Hero">
@@ -75,14 +70,12 @@ function Main(props) {
           <MainTestemonials className="main-testemonials">
               <Testimonials />
           </MainTestemonials>
-          {/*
           <MainDescription className="main-description">
               <Description />
-          </MainDescription> */}
+          </MainDescription>
+
       </MainContainer>
   );
 }
-
-//Main.propTypes = {}
 
 export default Main

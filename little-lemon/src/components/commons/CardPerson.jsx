@@ -55,7 +55,10 @@ const CardContainer = styled.div`
 `;
 
 const CardHeader = styled.div`
+    display: flex;
+    flex-direction:row;
     padding: 2rem;
+    gap: 2rem;
 
     @media only screen and (${devices.mobileP}) {
         padding: 3rem;
@@ -133,11 +136,15 @@ function CardPerson({
         <>
             <Card
                 className="card"
-                backgroundColorCard={ backgroundColorCard }
+                backgroundColorCard={
+                    backgroundColorCard
+                }
             >
                 <CardContainer
                     className="card-container"
-                    backgroundColorCard={ backgroundColorCard }
+                    backgroundColorCard={
+                        backgroundColorCard
+                    }
                 >
                     <CardHeader className="card-header">
                         <IoIosStar
@@ -162,7 +169,12 @@ function CardPerson({
                         />
                     </CardHeader>
 
-                    <CardBody className="card-body">
+                    <CardBody
+                        className="card-body"
+                        backgroundColorCard={
+                            backgroundColorCard
+                        }
+                    >
                         <Img
                             className="testimonial-img"
                             src={imageUrl}
@@ -172,13 +184,24 @@ function CardPerson({
                         <Text
                             text={name}
                             color={colorName}
-                            fontSize={ fontSizeName }
-                            fontFamily={ fontFamilyName }
-                            fontWeight={ fontWeightName }
+                            fontSize={
+                                fontSizeName
+                            }
+                            fontFamily={
+                                fontFamilyName
+                            }
+                            fontWeight={
+                                fontWeightName
+                            }
                         />
                     </CardBody>
 
-                    <CardFooter className="card-footer">
+                    <CardFooter
+                        className="card-footer"
+                        backgroundColorCard={
+                            backgroundColorCard
+                        }
+                    >
                         <Text
                             text={descripton}
                             fontFamily={
@@ -226,7 +249,7 @@ CardPerson.defaultProps = {
     sizeStar: '70',
     colorStar: `${colorsPrimary.secondary}`,
 
-    backgroundColorCard: `${colorsSpecials.third}`
+    backgroundColorCard: `${colorsSpecials.secondary}`
 };
 
 export default CardPerson

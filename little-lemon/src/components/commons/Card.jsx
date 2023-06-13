@@ -9,7 +9,7 @@ import Text from './Text';
 import { IoIosCard } from 'react-icons/io';
 
 const CardContainer = styled.div`
-    box-shadow: ${boxShadow.small};
+    box-shadow: ${boxShadow.medium};
     background: ${colorsSecundary.primary};
     width: 18rem;
     border-radius: 2%;
@@ -103,8 +103,6 @@ const ImgStyle = styled.img`
     }
 `;
 
-
-
 function Card({
     imageUrl,
     name,
@@ -131,7 +129,8 @@ function Card({
                     <SubTitle
                         subtitle={price}
                         color="#EE9972"
-                        fontSize="19px"
+                        fontSize="18px"
+                        fontWeight='600'
                     />
                 </CardBodyHeader>
 

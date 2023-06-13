@@ -11,7 +11,6 @@ import {
 import Title from '../../commons/Title';
 import CardPerson from '../../commons/CardPerson';
 
-
 const TestimonialsTitle = styled.div`
     display: flex;
     justify-content: center;

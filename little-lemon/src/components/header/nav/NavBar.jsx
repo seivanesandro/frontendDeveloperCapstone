@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
@@ -13,12 +13,12 @@ import {
     MDBCollapse
 } from 'mdb-react-ui-kit';
 
-import {logo} from '../../../utilities/images';
+import { logo } from '../../../utilities/images';
 import {
     colorsPrimary,
     colorsSpecials,
     fontWeight,
-    fontSize,
+    fontSize
 } from '../../../utilities/utils';
 
 const Img = styled.img`
@@ -57,7 +57,10 @@ export default function NavBar({
                 bgColor="light"
                 className="navBar fixed-top p-2 border border-0 shadow"
             >
-                <MDBContainer fluid  className='px-5'>
+                <MDBContainer
+                    fluid
+                    className="px-5"
+                >
                     <MDBNavbarBrand
                         className="navbar-link"
                         href="#"
@@ -120,7 +123,7 @@ export default function NavBar({
                                 <MDBNavbarLink
                                     active
                                     aria-current="page"
-                                    href="#"
+                                    href="Descriptions"
                                 >
                                     <LabelsStyle>
                                         {about}
@@ -132,7 +135,7 @@ export default function NavBar({
                                 <MDBNavbarLink
                                     active
                                     aria-current="page"
-                                    href="#"
+                                    href="Specials Menus"
                                 >
                                     <LabelsStyle>
                                         {menu}
@@ -146,7 +149,7 @@ export default function NavBar({
                                     aria-current="page"
                                     href="#"
                                 >
-                                    <LabelsStyle className='text-reset'>
+                                    <LabelsStyle className="text-reset">
                                         {orders}
                                     </LabelsStyle>
                                 </MDBNavbarLink>
@@ -164,7 +167,7 @@ NavBar.propTypes = {
     reserves: PropTypes.string.isRequired,
     about: PropTypes.string.isRequired,
     menu: PropTypes.string.isRequired,
-    orders: PropTypes.string.isRequired,
+    orders: PropTypes.string.isRequired
 };
 
 NavBar.defaultProps = {
@@ -172,7 +175,5 @@ NavBar.defaultProps = {
     reserves: 'Reserves',
     about: 'About',
     menu: 'Menu',
-    orders: 'Orders',
+    orders: 'Orders'
 };
-
-

@@ -1,5 +1,5 @@
 import React from 'react';
-//TODO:import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 import {
     MDBFooter,
@@ -13,11 +13,11 @@ import {
     colorsSecundary,
     colorsSpecials,
     fontFamily,
-    fontWeight
+    fontWeight,
 } from '../../utilities/utils';
-//import { devices } from '../../utilities/constantes';
 import { logoFooter } from '../../utilities/images';
 import styled from 'styled-components';
+import { devices } from '../../utilities/constantes';
 
 const FooterHeaderContainer = styled.section`
     background: ${colorsPrimary.primary};
@@ -31,60 +31,172 @@ const FooterBoottom = styled.div`
     background: ${colorsPrimary.primary};
 `;
 
+const RowContainer = styled(MDBRow)`
+    display: flex;
+    flex-direction: row;
+`;
+
 const FooterTitle = styled.h6`
     color: ${colorsSpecials.third};
-    font-size: 15px;
+    font-size: 21px;
+    line-height: 1.7rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    font-weight: ${fontWeight.large};
+
+    @media only screen and (${devices.mobileP}) {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    @media only screen and (${devices.mobileM}) {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    @media only screen and (${devices.mobileG}) {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    @media only screen and (${devices.tablet}) {
+        font-size: 3rem;
+        line-height: 3rem;
+        justify-content: start;
+    }
 `;
 
 const FooterLink = styled.a`
-    font-size: 14px;
+    font-size: 19px;
     color: ${colorsSpecials.third};
+    line-height: 1.7rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
 
     &:hover {
         color: ${colorsPrimary.secondary};
+    }
+
+    @media only screen and (${devices.mobileP}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @media only screen and (${devices.mobileM}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @media only screen and (${devices.mobileG}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @media only screen and (${devices.tablet}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
     }
 `;
 
 const FooterText = styled.p`
     color: ${colorsSpecials.third};
-    font-size: 14px;
+    font-size: 19px;
+    letter-spacing: 0.3rem;
+    line-height: 1.9rem;
+    text-align: center;
+    @media only screen and (${devices.mobileP}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @media only screen and (${devices.mobileM}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @media only screen and (${devices.mobileG}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @media only screen and (${devices.tablet}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 `;
 
 const Img = styled.img`
-    width: 100px;
-    height: 160px;
+    width: 190px;
+    height: 310px;
+    margin: 0.5rem 0;
+
+    @media only screen and (${devices.mobileP}) {
+        width: 190px;
+        height: 330px;
+    }
+    @media only screen and (${devices.mobileM}) {
+        width: 190px;
+        height: 330px;
+    }
+    @media only screen and (${devices.mobileG}) {
+        width: 190px;
+        height: 330px;
+    }
+    @media only screen and (${devices.tablet}) {
+        width: 190px;
+        height: 330px;
+    }
 `;
 
 const IconsSocialMediaStyle = styled(MDBIcon)`
     color: ${colorsSpecials.third};
+    font-size: 2rem;
 
     &:hover {
         color: ${colorsPrimary.secondary};
+    }
+
+    @media only screen and (${devices.mobileP}) {
+        font-size: 2rem;
+    }
+    @media only screen and (${devices.mobileM}) {
+        font-size: 2rem;
+    }
+    @media only screen and (${devices.mobileG}) {
+        font-size: 2rem;
+    }
+    @media only screen and (${devices.tablet}) {
+        font-size: 2rem;
     }
 `;
 
 const CopyrightFooter = styled.span`
     color: ${colorsSecundary.primary};
-    font-size: 15px;
+    font-size: 19px;
     font-family: ${fontFamily.karla};
     font-weight: ${fontWeight.small};
+    @media only screen and (${devices.mobileP}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @media only screen and (${devices.mobileM}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @media only screen and (${devices.mobileG}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    @media only screen and (${devices.tablet}) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 `;
 
 function Footer () {
   return (
       <>
-          <MDBFooter className="footer-header text-center text-lg-start text-muted">
-              <FooterHeaderContainer className="footer-header-container d-flex justify-content-center justify-content-lg-between p-4">
-                  <div className="logo-container me-5 d-none d-lg-block"></div>
-
-                  <div className="social-media-icons-container mt-1">
+          <MDBFooter className="footer footer-container text-center text-lg-start text-muted">
+              <FooterHeaderContainer className="footer-header-container d-flex justify-content-center border border-bottom-1 p-4">
+                  <div className="social-media-icons-container m-4">
                       <a
                           href="/"
                           className="me-1 px-4 text-reset icons-container"
                       >
                           <IconsSocialMediaStyle
                               fab
-                              size="lg"
+                              size="xl"
                               icon="facebook-f"
                           />
                       </a>
@@ -95,7 +207,7 @@ function Footer () {
                       >
                           <IconsSocialMediaStyle
                               fab
-                              size="lg"
+                              size="xl"
                               icon="twitter"
                           />
                       </a>
@@ -106,21 +218,21 @@ function Footer () {
                       >
                           <IconsSocialMediaStyle
                               fab
-                              size="lg"
+                              size="xl"
                               icon="instagram"
                           />
                       </a>
                   </div>
               </FooterHeaderContainer>
 
-              <section className="footer-main">
+              <section className="footer-section-main">
                   <FooterMainContainer className="text-center text-md-start p-3 footer-main-container">
-                      <MDBRow className="mt-1">
+                      <RowContainer className="row text-center d-flex justify-content-evenly mt-1">
                           <MDBCol
                               md="1"
                               lg="1"
                               xl="1"
-                              className="mx-auto mb-4"
+                              className="mx-1 mb-4"
                           >
                               <Img
                                   src={logoFooter}
@@ -132,7 +244,7 @@ function Footer () {
                               md="1"
                               lg="1"
                               xl="1"
-                              className="mx-auto mb-4"
+                              className="mx-1 mb-4"
                           >
                               <FooterTitle className="text-uppercase fw-bold mb-4 ">
                                   Navigation
@@ -140,7 +252,7 @@ function Footer () {
 
                               <p>
                                   <FooterLink
-                                      href="#!"
+                                  href='/'
                                       className="footer-link"
                                   >
                                       Home
@@ -167,10 +279,10 @@ function Footer () {
 
                               <p>
                                   <FooterLink
-                                      href="#!"
+                                      href="/"
                                       className="footer-link"
                                   >
-                                      Revervations
+                                      Reservation
                                   </FooterLink>
                               </p>
 
@@ -179,7 +291,7 @@ function Footer () {
                                       href="#!"
                                       className="footer-link"
                                   >
-                                      Order Online
+                                      Order
                                   </FooterLink>
                               </p>
 
@@ -197,46 +309,25 @@ function Footer () {
                               md="1"
                               lg="1"
                               xl="1"
-                              className="mx-auto mb-md-0 mb-4"
+                              className="mx-1 mb-md-0 mb-4"
                           >
                               <FooterTitle className="text-uppercase fw-bold mb-4">
                                   Contact
                               </FooterTitle>
 
                               <FooterText>
-                                  <MDBIcon
-                                      icon="home"
-                                      className="me-3"
-                                  />
-                                  Chicago, 10012,
-                                  US
+                                  Chicago
                               </FooterText>
 
                               <FooterText>
-                                  <MDBIcon
-                                      icon="envelope"
-                                      className="me-3"
-                                  />
-                                  little-lemon@mail.com
+                                  rllemon@mail.com
                               </FooterText>
 
                               <FooterText>
-                                  <MDBIcon
-                                      icon="phone"
-                                      className="me-3"
-                                  />{' '}
-                                  + 01 234 567 88
-                              </FooterText>
-
-                              <FooterText>
-                                  <MDBIcon
-                                      icon="print"
-                                      className="me-3"
-                                  />{' '}
-                                  + 01 234 567 89
+                                  +0123456788
                               </FooterText>
                           </MDBCol>
-                      </MDBRow>
+                      </RowContainer>
                   </FooterMainContainer>
               </section>
 

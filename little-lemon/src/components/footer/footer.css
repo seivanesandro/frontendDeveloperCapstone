@@ -1,0 +1,32 @@
+img{
+    width: 150px;
+    height: 250px;
+    background: transparent;
+}
+
+li{
+    list-style: none;
+    font-size: 1.3rem;
+    color: black;
+    line-height: 3rem;
+}
+
+strong{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color:black;
+}
+
+.footer-head{
+    /* font-size and font famaly */
+}
+
+.footer-item{
+    /* font-size and font famaly */
+}
+
+/* .footer-nav{}
+
+.footer-contact{}
+
+.footer-social{} */
