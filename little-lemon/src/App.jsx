@@ -3,11 +3,10 @@ import styled from 'styled-components';
 
 import Header from './components/header/Header';
 import HomePage from './pages/HomePage';
-import Footer from  './components/footer/Footer';
+import Footer from './components/footer/Footer';
 
-
-// import BookingPage from './pages/BookingPage';
-// import ComfirmedBooking from './components/main/booking/ConfirmedBooking';
+import BookingPage from './pages/BookingPage';
+import ComfirmedBooking from './pages/confirmedBooking';
 // import {  Route,  Routes } from "react-router-dom"
 
 const AppContainer = styled.div`
@@ -17,16 +16,20 @@ const AppContainer = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 0.1rem;
-`; 
+`;
 
 function App() {
-  return (
-      <AppContainer className="App-Container">
-          <Header />
-          <HomePage />
-          <Footer />
-      </AppContainer>
-  );
+    return (
+        <AppContainer className="App-Container">
+            <Header />
+            <HomePage />
+
+            <BookingPage />
+            <ComfirmedBooking />
+
+            <Footer />
+        </AppContainer>
+    );
 }
 
 export default App;

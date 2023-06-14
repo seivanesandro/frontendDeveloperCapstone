@@ -1,7 +1,6 @@
 import { useState } from 'react';
 //import { useNavigate } from 'react-router-dom';
-
-function BookingForm({
+export default function BookingForm({
     availableTimes,
     dispatch,
     submitForm
@@ -95,14 +94,14 @@ function BookingForm({
                         type="text"
                         id="contact-number"
                         name="contactNumber"
-                        placeholder="123-456-7890"
+                        placeholder="+9x xxx xxx xxx"
                         value={
                             formData.contactNumber
                         }
                         onChange={
                             handleFormChange
                         }
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        pattern="[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}"
                     />
                 </div>
                 <div className="seperate date-time">
@@ -194,5 +193,3 @@ function BookingForm({
         </main>
     );
 }
-
-export default BookingForm;

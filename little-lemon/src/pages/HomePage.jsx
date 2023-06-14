@@ -1,11 +1,10 @@
 import React from 'react';
 //FIXME:import PropTypes from 'prop-types';
 import Main from '../components/main/Main';
-
 function HomePage(props) {
   return (
     <main>
-        <Main/>
+       <Main/>
     </main>
   )
 }
