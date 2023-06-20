@@ -43,7 +43,6 @@ const SubTitleH6 = styled.h6`
         letter-spacing: none;
     }
 `;
-
 function Subtitle({
     subtitle,
     color,

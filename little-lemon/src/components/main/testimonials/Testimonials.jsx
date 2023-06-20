@@ -1,7 +1,5 @@
 import React from 'react'
-//FIXME:import PropTypes from 'prop-types'
 import styled from 'styled-components';
-
 import {
     lily,
     anna,
@@ -11,9 +9,16 @@ import {
 import Title from '../../commons/Title';
 import CardPerson from '../../commons/CardPerson';
 
+const TestimonialContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+`;
+
 const TestimonialsTitle = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 5rem;
 `;
 
@@ -26,7 +31,7 @@ const CardContainer = styled.div`
 function Testimonials() {
   return (
       <>
-          <div className="testimonials-container">
+          <TestimonialContainer className="testimonials-container">
               <TestimonialsTitle className="testimonials-title">
                   <Title
                       title="Testimonials"
@@ -59,11 +64,9 @@ function Testimonials() {
                       descripton='"Little is of another planet!! Great Service and the quality of food!"'
                   />
               </CardContainer>
-          </div>
+          </TestimonialContainer>
       </>
   );
 }
-
-Testimonials.propTypes = {}
 
 export default Testimonials

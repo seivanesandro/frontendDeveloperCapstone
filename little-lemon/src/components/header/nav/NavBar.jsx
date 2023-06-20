@@ -13,7 +13,6 @@ import {
     MDBNavbarItem,
     MDBCollapse
 } from 'mdb-react-ui-kit';
-
 import { logo } from '../../../utilities/images';
 import {
     colorsPrimary,
@@ -39,7 +38,6 @@ const LabelsStyle = styled.label`
         color: ${colorsSpecials.primary};
     }
 `;
-
 export default function NavBar({
     linkOne,
     linktwo,
@@ -49,7 +47,6 @@ export default function NavBar({
 }) {
     const [showNavCentred, setShowNavCentred] =
         useState(false);
-
     return (
         <>
             <MDBNavbar

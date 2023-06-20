@@ -100,7 +100,6 @@ const Img = styled.img`
     @media only screen and (${devices.tablet}) {
     }
 `;
-
 function Description(props) {
   return (
       <>

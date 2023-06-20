@@ -37,13 +37,11 @@ const Img = styled.img`
 `;
 
 function ConfirmedBooking() {
-    
     const navigate = useNavigate();
-
     useEffect(() => {
         setTimeout(() => {
             navigate('/');
-        }, 3000);
+        }, 7000);
     }, [navigate]); 
 
      return (
@@ -56,7 +54,7 @@ function ConfirmedBooking() {
                      />
                  </ContainerImg>
                  <Title
-                     title="Your Revervation was confirmed."
+                     title="Your Reserve was confirmed."
                      lineHeight="13rem"
                      color="#495E57"
                      fontSize="30px"
@@ -80,5 +78,4 @@ function ConfirmedBooking() {
      );
 }
 
-
-export default ConfirmedBooking
+export default ConfirmedBooking;

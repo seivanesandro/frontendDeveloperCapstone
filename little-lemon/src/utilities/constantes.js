@@ -17,7 +17,6 @@ High-res laptop or desktop: 1920 x 1080.
 @media only screen and (${devices.portatil }) {}
 @media only screen and (${devices.portatilL }) {}
 @media only screen and (${devices.fourk }) {}
-
 */
 
 const responsivePoints = {
@@ -29,6 +28,7 @@ const responsivePoints = {
     portatilL: '1440px',
     fourk: '2560px'
 };
+
 export const devices = {
     mobileP: `( max-width: ${responsivePoints.mobileP} )`,
     mobileM: `( max-width: ${responsivePoints.mobileM} )`,

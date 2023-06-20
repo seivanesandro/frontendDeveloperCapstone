@@ -23,7 +23,6 @@ export default function BookingPage() {
         if (isSubmitted) {
             navigate('/confirmed');
         }
-
     }
 
     function reducer(state, action) {

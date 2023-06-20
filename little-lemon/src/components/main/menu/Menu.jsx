@@ -1,7 +1,5 @@
 import React from 'react'
-//import PropTypes from 'prop-types'
- import styled from 'styled-components';
-
+import styled from 'styled-components';
 import Card from '../../commons/Card';
 import Button from '../../commons/Button';
 import { devices } from '../../../utilities/constantes';
@@ -78,7 +76,6 @@ const MenuHeader = styled.div`
         align-items: flex-start;
     }
 `;
-
 function Menu() {
     return (
         <MenuContainer
@@ -126,13 +123,5 @@ function Menu() {
         </MenuContainer>
     );
 }
-
-Menu.propTypes = {
-
-};
-
-Menu.defaultProps = {
-
-};
 
 export default Menu

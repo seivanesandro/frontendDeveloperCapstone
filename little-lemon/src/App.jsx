@@ -1,10 +1,8 @@
 import './App.css';
 import styled from 'styled-components';
-
 import Header from './components/header/Header';
 import HomePage from './pages/HomePage';
 import Footer from './components/footer/Footer';
-
 import BookingPage from './pages/BookingPage';
 import ComfirmedBooking from './pages/confirmedBooking';
 import {  Route,  Routes } from "react-router-dom"

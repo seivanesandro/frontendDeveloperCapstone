@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-//import { devices } from '../../utilities/constantes';
-
 import Hero from './hero/Hero';
 import Menu from './menu/Menu';
 import Testimonials from './testimonials/Testimonials';

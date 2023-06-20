@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { MDBInput } from 'mdb-react-ui-kit';
 import { boxShadowSpecial } from '../../utilities/utils';
-//FIXME:
+
 const InputText = styled(MDBInput)`
     font-family: 'Roboto' !important;
     box-shadow: ${({ boxShadow }) =>
         boxShadow} !important;
 `;
-
 function Input({
     inputPlaceholder,
     type,

@@ -14,11 +14,10 @@ const SelectStyle = styled.select`
 
 const LabelStyle = styled.label`
     color: ${({ colorLabel }) => colorLabel};
-    margin: 0.3rem;
+    margin: 0.3rem 3rem 0 0;
     font-family: 'Roboto';
     letter-spacing: 0.1rem;
 `;
-
 function Select({
     title,
     children,

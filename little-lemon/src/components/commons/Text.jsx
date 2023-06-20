@@ -45,7 +45,6 @@ const TextParagraph = styled.p`
         letter-spacing: 0.2rem;
     }
 `;
-
 function Text({
     text,
     color,

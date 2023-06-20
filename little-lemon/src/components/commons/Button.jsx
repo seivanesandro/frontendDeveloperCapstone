@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { devices } from '../../utilities/constantes';
-
 import {
     colorsPrimary,
     fontSize,
@@ -59,7 +58,6 @@ const Btn = styled.button`
         font-size: 26px;
     }
 `;
-
 function Button({
     name,
     colorText,

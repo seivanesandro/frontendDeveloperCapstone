@@ -7,7 +7,6 @@ import {
     MDBRow,
     MDBCol
 } from 'mdb-react-ui-kit';
-
 import Button from '../../commons/Button';
 import Title from '../../commons/Title';
 import Subtitle from '../../commons/Subtitle';
@@ -17,7 +16,6 @@ import {
     borderRadius,
     boxShadow,
 } from '../../../utilities/utils';
-
 
 const ContainerStyle = styled(MDBContainer)`
     max-width: 900px;
@@ -93,7 +91,6 @@ const Img = styled.img`
     }
 `;
 
-
 function Hero() {
     return (
         <>
@@ -139,7 +136,3 @@ function Hero() {
 }
 
 export default Hero
-
-
-
-

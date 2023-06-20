@@ -16,22 +16,19 @@ import {
 } from '../../utilities/utils';
 import { devices } from '../../utilities/constantes';
 
-
 const Card = styled.div`
     background: ${({ backgroundColorCard }) =>
         backgroundColorCard};
+    width: 30rem;
 
     @media only screen and (${devices.mobileP}) {
-
     }
     @media only screen and (${devices.mobileM}) {
-
     }
     @media only screen and (${devices.mobileG}) {
-
     }
     @media only screen and (${devices.tablet}) {
-        width: 50rem;
+        width: 30rem;
     }
 `;
 
@@ -76,16 +73,16 @@ const CardHeader = styled.div`
 
 const CardBody = styled.div`
     background: ${colorsSecundary.primary};
-    padding: 2rem;
+    padding: 1rem;
 
     @media only screen and (${devices.mobileP}) {
-        padding: 3rem;
+        padding: 2rem;
     }
     @media only screen and (${devices.mobileM}) {
-        padding: 3rem;
+        padding: 2rem;
     }
     @media only screen and (${devices.mobileG}) {
-        padding: 3rem;
+        padding: 2rem;
     }
     @media only screen and (${devices.tablet}) {
         padding: 2rem;
@@ -94,17 +91,17 @@ const CardBody = styled.div`
 
 const CardFooter = styled.div`
     background: ${colorsSecundary.primary};
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: justify;
 
     @media only screen and (${devices.mobileP}) {
-        padding: 3rem;
+        padding: 2rem;
     }
     @media only screen and (${devices.mobileM}) {
-        padding: 3rem;
+        padding: 2rem;
     }
     @media only screen and (${devices.mobileG}) {
-        padding: 3rem;
+        padding: 2rem;
     }
     @media only screen and (${devices.tablet}) {
         padding: 2rem;
@@ -116,7 +113,6 @@ const Img = styled.img`
     height: 120px;
     border-radius: ${borderRadius.smalls};
 `;
-
 function CardPerson({
     imageUrl,
     name,
@@ -240,13 +236,11 @@ CardPerson.defaultProps = {
     fontSizeName: `${fontSize.small}`,
     fontFamilyName: `${fontFamily.karla}`,
     fontWeightName: `${fontWeight.large}`,
-
     descripton: 'descripton',
     colorDescripton: `${colorsPrimary.primary}`,
     fontFamilyDescription: `${fontFamily.karla}`,
     fontSizeDescription: `${fontSize.small}`,
-
-    sizeStar: '70',
+    sizeStar: '60',
     colorStar: `${colorsPrimary.secondary}`,
 
     backgroundColorCard: `${colorsSpecials.secondary}`

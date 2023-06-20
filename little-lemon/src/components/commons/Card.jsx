@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
 import { devices } from '../../utilities/constantes';
 import { colorsSecundary, boxShadow } from '../../utilities/utils';
 import SubTitle from './Subtitle';
@@ -102,7 +101,6 @@ const ImgStyle = styled.img`
         width: 515px;
     }
 `;
-
 function Card({
     imageUrl,
     name,

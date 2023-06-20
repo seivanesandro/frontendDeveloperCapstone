@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-
 import Button from '../commons/Button';
 import Text from '../commons/Text'; 
 import Select from '../commons/Select';
@@ -62,7 +61,9 @@ function BookingForm({
         <main style={{ marginTop: '2rem' }}>
             <Text
                 sizeText="60rem"
-                text="Please fill in the form below accurately to enable us serve you nicely."
+                text="Please fill your data accurately below to allow us to give the best experience possible."
+                fontSize="22px"
+                color="#F4CE14"
             />
             <form onSubmit={handleSubmit}>
                 <FormStyle className="form-style">
@@ -87,7 +88,7 @@ function BookingForm({
                         onChange={
                             handleFormChange
                         }
-                        inputPlaceholder="Last-Name"
+                        inputPlaceholder="Last name"
                     />
                 </FormStyle>
 
@@ -169,7 +170,9 @@ function BookingForm({
                             Group Friends
                         </option>
 
-                        <option>Birthday</option>
+                        <option>
+                            Team Building
+                        </option>
 
                         <option>
                             Anniversary
