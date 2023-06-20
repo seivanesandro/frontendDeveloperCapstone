@@ -1,6 +1,16 @@
 import { useState } from 'react';
-//import { useNavigate } from 'react-router-dom';
-export default function BookingForm({
+import styled from 'styled-components';
+
+import Button from '../commons/Button';
+import Text from '../commons/Text'; 
+import Select from '../commons/Select';
+import Input from '../commons/Input';
+
+const FormStyle = styled.div`
+    margin: 2rem;
+`;
+
+function BookingForm({
     availableTimes,
     dispatch,
     submitForm
@@ -13,7 +23,7 @@ export default function BookingForm({
         date: '',
         time: '00:00',
         noOfGuests: 1,
-        occasion: 'Birthday'
+        occasion: 'Occasion'
     });
 
     const handleFormChange = event => {
@@ -49,18 +59,14 @@ export default function BookingForm({
         <option key={time}>{time}</option>
     ));
     return (
-        <main>
-            <p className="desc-text form-desc">
-                Please fill in the form below
-                accurately to enable us serve you
-                nicely.
-            </p>
+        <main style={{ marginTop: '2rem' }}>
+            <Text
+                sizeText="60rem"
+                text="Please fill in the form below accurately to enable us serve you nicely."
+            />
             <form onSubmit={handleSubmit}>
-                <div className="seperate">
-                    <label htmlFor="first-name">
-                        First Name
-                    </label>
-                    <input
+                <FormStyle className="form-style">
+                    <Input
                         type="text"
                         id="first-name"
                         name="firstName"
@@ -68,14 +74,12 @@ export default function BookingForm({
                         onChange={
                             handleFormChange
                         }
-                        required
+                        inputPlaceholder="Name"
                     />
-                </div>
-                <div className="seperate">
-                    <label htmlFor="last-name">
-                        Last Name
-                    </label>
-                    <input
+                </FormStyle>
+
+                <FormStyle className="form-style">
+                    <Input
                         type="text"
                         id="last-name"
                         name="lastName"
@@ -83,113 +87,116 @@ export default function BookingForm({
                         onChange={
                             handleFormChange
                         }
-                        required
+                        inputPlaceholder="Last-Name"
                     />
-                </div>
-                <div className="seperate">
-                    <label htmlFor="contact-number">
-                        Contact Number
-                    </label>
-                    <input
+                </FormStyle>
+
+                <FormStyle className="form-style">
+                    <Input
                         type="text"
                         id="contact-number"
                         name="contactNumber"
-                        placeholder="+9x xxx xxx xxx"
                         value={
                             formData.contactNumber
                         }
                         onChange={
                             handleFormChange
                         }
-                        pattern="[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}"
+                        inputPlaceholder="Phone"
+                        pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{3}"
                     />
-                </div>
-                <div className="seperate date-time">
-                    <div className="seperate-child">
-                        <label htmlFor="res-date">
-                            Choose date
-                        </label>
-                        <input
-                            type="date"
-                            id="res-date"
-                            name="date"
-                            value={formData.date}
-                            onChange={
-                                handleDateChange
-                            }
-                            required
-                            min={currentDate}
-                        />
-                    </div>
-                    <div className="seperate-child">
-                        <label htmlFor="res-time">
-                            Choose time
-                        </label>
-                        <select
-                            id="res-time "
-                            name="time"
-                            value={formData.time}
-                            onChange={
-                                handleFormChange
-                            }
-                            required
-                        >
-                            {options}
-                        </select>
-                    </div>
-                </div>
-                <div className="seperate guests-occasion">
-                    <div className="seperate-child">
-                        <label htmlFor="guests">
-                            Number of guests
-                        </label>
-                        <input
-                            type="number"
-                            placeholder="1"
-                            min="1"
-                            max="10"
-                            required
-                            id="guests"
-                            name="noOfGuests"
-                            value={
-                                formData.noOfGuests
-                            }
-                            onChange={
-                                handleFormChange
-                            }
-                        />
-                    </div>
-                    <div className="seperate-child">
-                        <label htmlFor="occasion">
-                            Occasion
-                        </label>
-                        <select
-                            id="occasion"
-                            name="occasion"
-                            required
-                            value={
-                                formData.occasion
-                            }
-                            onChange={
-                                handleFormChange
-                            }
-                        >
-                            <option>
-                                Birthday
-                            </option>
-                            <option>
-                                Anniversary
-                            </option>
-                        </select>
-                    </div>
-                </div>
-                <input
-                    className="submit"
-                    type="submit"
-                    value="Reserve"
-                    aria-label="submit button"
-                />
+                </FormStyle>
+                <FormStyle className="form-style">
+                    <Input
+                        type="date"
+                        id="res-date"
+                        name="date"
+                        value={formData.date}
+                        onChange={
+                            handleDateChange
+                        }
+                        min={currentDate}
+                        inputPlaceholder="Date"
+                    />
+                </FormStyle>
+                <FormStyle className="form-style">
+                    <Input
+                        type="number"
+                        inputPlaceholder="Nº Guests"
+                        min="1"
+                        max="10"
+                        id="guests"
+                        name="noOfGuests"
+                        value={
+                            formData.noOfGuests
+                        }
+                        onChange={
+                            handleFormChange
+                        }
+                        required
+                    />
+                </FormStyle>
+                <FormStyle className="form-style">
+                    <Select
+                        title="Choose your best time"
+                        id="res-time "
+                        name="time"
+                        value={formData.time}
+                        onChange={
+                            handleFormChange
+                        }
+                    >
+                        {options}
+                    </Select>
+                </FormStyle>
+                <FormStyle className="form-style">
+                    <Select
+                        title="Choose your Occasion"
+                        id="occasion"
+                        name="occasion"
+                        value={formData.occasion}
+                        onChange={
+                            handleFormChange
+                        }
+                    >
+                        <option>Occasion</option>
+
+                        <option>
+                            Romantic Dinner
+                        </option>
+
+                        <option>
+                            Group Friends
+                        </option>
+
+                        <option>Birthday</option>
+
+                        <option>
+                            Anniversary
+                        </option>
+                    </Select>
+                </FormStyle>
+
+                <FormStyle className="form-style">
+                    <Button
+                        name="Reserve"
+                        className="submit"
+                        type="submit"
+                        value=""
+                        aria-label="submit button"
+                        size="0.5rem 25rem 0.5rem 25rem"
+                        fontSize="22px"
+                        colorText="#fff"
+                        backgroundText="#000000"
+                        boxShadow="white"
+                        colorHover="#495E57"
+                        backgroundHover="#F4CE14"
+                        boxShadowHover="0 0 0.5rem #495E57"
+                    />
+                </FormStyle>
             </form>
         </main>
     );
 }
+
+export default BookingForm;

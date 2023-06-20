@@ -1,5 +1,5 @@
 import React from 'react';
-//FIXME:import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import styled from 'styled-components';
 import { devices } from '../../../utilities/constantes';
 import {
@@ -17,6 +17,7 @@ import {
     borderRadius,
     boxShadow,
 } from '../../../utilities/utils';
+
 
 const ContainerStyle = styled(MDBContainer)`
     max-width: 900px;
@@ -117,7 +118,10 @@ function Hero() {
                     </MDBCol>
 
                     <MDBCol>
-                        <Button name="Reserve a table" />
+                        <Link to="/booking">
+                            {' '}
+                            <Button name="Reserve a table" fontSize='22px'></Button>
+                        </Link>
                     </MDBCol>
                 </RowStyled>
 

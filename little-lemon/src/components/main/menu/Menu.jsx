@@ -81,10 +81,18 @@ const MenuHeader = styled.div`
 
 function Menu() {
     return (
-        <MenuContainer className="menu-Container">
+        <MenuContainer
+            className="menu-Container"
+            id="menu"
+        >
             <MenuHeader className="menu-header">
-                <Title title='Specials Menus' color='coral' >title</Title>
-                <Button name='Order Online'/>
+                <Title
+                    title="Specials Menus"
+                    color="coral"
+                >
+                    title
+                </Title>
+                <Button name="Order Online" fontSize='22px' />
             </MenuHeader>
 
             <CardContainer className="card-container">

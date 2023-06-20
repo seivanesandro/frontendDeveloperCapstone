@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 import {
     MDBContainer,
@@ -9,7 +11,6 @@ import {
     MDBIcon,
     MDBNavbarNav,
     MDBNavbarItem,
-    MDBNavbarLink,
     MDBCollapse
 } from 'mdb-react-ui-kit';
 
@@ -18,7 +19,6 @@ import {
     colorsPrimary,
     colorsSpecials,
     fontWeight,
-    fontSize
 } from '../../../utilities/utils';
 
 const Img = styled.img`
@@ -27,9 +27,10 @@ const Img = styled.img`
 `;
 
 const LabelsStyle = styled.label`
-    font-size: ${fontSize.small};
+    font-size: 18px;
     font-weight: ${fontWeight.medium};
     color: ${colorsPrimary.primary};
+    cursor: pointer;
 
     &:hover {
         color: ${colorsSpecials.primary};
@@ -40,11 +41,11 @@ const LabelsStyle = styled.label`
 `;
 
 export default function NavBar({
-    home,
-    reserves,
-    about,
-    menu,
-    orders
+    linkOne,
+    linktwo,
+    linkthird,
+    linkfour,
+    linkfive
 }) {
     const [showNavCentred, setShowNavCentred] =
         useState(false);
@@ -96,63 +97,78 @@ export default function NavBar({
                     >
                         <MDBNavbarNav className="mr-auto px-5 mb-2 mb-lg-0 g-2">
                             <MDBNavbarItem className="px-5">
-                                <MDBNavbarLink
+                                <Link
                                     active
                                     aria-current="page"
-                                    href="#"
+                                    to="/"
                                 >
                                     <LabelsStyle>
-                                        {home}
+                                        {linkOne}
                                     </LabelsStyle>
-                                </MDBNavbarLink>
+                                </Link>
                             </MDBNavbarItem>
 
                             <MDBNavbarItem className="px-5">
-                                <MDBNavbarLink
+                                <Link
                                     active
                                     aria-current="page"
-                                    href="#"
+                                    to="/booking"
                                 >
                                     <LabelsStyle>
-                                        {reserves}
+                                        {linktwo}
                                     </LabelsStyle>
-                                </MDBNavbarLink>
+                                </Link>
                             </MDBNavbarItem>
 
                             <MDBNavbarItem className="px-5">
-                                <MDBNavbarLink
-                                    active
-                                    aria-current="page"
-                                    href="Descriptions"
+                                <HashLink
+                                    smooth
+                                    to="/#menu"
                                 >
                                     <LabelsStyle>
-                                        {about}
+                                        {
+                                            linkthird
+                                        }
                                     </LabelsStyle>
-                                </MDBNavbarLink>
+                                </HashLink>
                             </MDBNavbarItem>
 
                             <MDBNavbarItem className="px-5">
-                                <MDBNavbarLink
-                                    active
-                                    aria-current="page"
-                                    href="Specials Menus"
+                                <HashLink
+                                    to="/#testimonial"
+                                    scroll={el =>
+                                        el.scrollIntoView(
+                                            {
+                                                behavior:
+                                                    'auto',
+                                                block: 'end'
+                                            }
+                                        )
+                                    }
                                 >
                                     <LabelsStyle>
-                                        {menu}
+                                        {linkfive}
                                     </LabelsStyle>
-                                </MDBNavbarLink>
+                                </HashLink>
                             </MDBNavbarItem>
 
                             <MDBNavbarItem className="px-5">
-                                <MDBNavbarLink
-                                    disabled
-                                    aria-current="page"
-                                    href="#"
+                                <HashLink
+                                    to="/#About"
+                                    scroll={el =>
+                                        el.scrollIntoView(
+                                            {
+                                                behavior:
+                                                    'auto',
+                                                block: 'end'
+                                            }
+                                        )
+                                    }
                                 >
-                                    <LabelsStyle className="text-reset">
-                                        {orders}
+                                    <LabelsStyle>
+                                        {linkfour}
                                     </LabelsStyle>
-                                </MDBNavbarLink>
+                                </HashLink>
                             </MDBNavbarItem>
                         </MDBNavbarNav>
                     </MDBCollapse>
@@ -163,17 +179,17 @@ export default function NavBar({
 }
 
 NavBar.propTypes = {
-    home: PropTypes.string.isRequired,
-    reserves: PropTypes.string.isRequired,
-    about: PropTypes.string.isRequired,
+    linkOne: PropTypes.string.isRequired,
+    linktwo: PropTypes.string.isRequired,
+    linkthird: PropTypes.string.isRequired,
     menu: PropTypes.string.isRequired,
-    orders: PropTypes.string.isRequired
+    linkfive: PropTypes.string.isRequired
 };
 
 NavBar.defaultProps = {
-    home: 'Home',
-    reserves: 'Reserves',
-    about: 'About',
-    menu: 'Menu',
-    orders: 'Orders'
+    linkOne: 'Home',
+    linktwo: 'Reserves',
+    linkthird: 'Menu',
+    linkfour: 'About',
+    linkfive: 'Testimonials'
 };

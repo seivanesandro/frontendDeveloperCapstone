@@ -33,7 +33,7 @@ const MainMenu = styled.section`
     -webkit-box-pack: center;
     justify-content: center;
     -webkit-box-align: stretch;
-    background: #F4CE14;
+    background: #FFF;
     padding: 5rem 5rem 10rem;
     gap: 20rem;
     align-items: center;

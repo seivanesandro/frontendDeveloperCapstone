@@ -104,7 +104,10 @@ const Img = styled.img`
 function Description(props) {
   return (
       <>
-          <DescriptionContainer className="container">
+          <DescriptionContainer
+              className="container"
+              id="About"
+          >
               <DescriptionRowContainerText className="description-row-text">
                   <MDBCol start>
                       <Title
@@ -136,7 +139,7 @@ function Description(props) {
                           fontSize="25px"
                           color="#333333"
                           textShadow="coral"
-                          sizeText='40rem'
+                          sizeText="40rem"
                       />
                   </MDBCol>
               </DescriptionRowContainerText>

@@ -29,9 +29,9 @@ const Btn = styled.button`
 
     &:hover {
         cursor: pointer;
-        color: ${colorsPrimary.secondary};
-        background: ${colorsPrimary.primary};
-        box-shadow: ${boxShadow.small};
+        color: ${({colorHover}) => colorHover};
+        background: ${({backgroundHover}) => backgroundHover};
+        box-shadow: ${({boxShadowHover}) => boxShadowHover} ;
     }
 
     @media only screen and (${devices.fourk}) {
@@ -69,6 +69,10 @@ function Button({
     size,
     fontSize,
     fontWeight,
+    colorHover,
+    backgroundHover,
+    boxShadowHover,
+    children
 }) {
     return (
         <Btn
@@ -79,8 +83,11 @@ function Button({
             size={size}
             fontSize={fontSize}
             fontWeight={fontWeight}
+            colorHover={colorHover}
+            backgroundHover={backgroundHover}
+            boxShadowHover={boxShadowHover}
         >
-            {name}
+            {name}{children}
         </Btn>
     );
 }
@@ -93,7 +100,10 @@ Button.propTypes = {
     boxShadow: PropTypes.string.isRequired,
     fontSize: PropTypes.string.isRequired,
     size: PropTypes.string.isRequired,
-    fontWeight: PropTypes.string.isRequired
+    fontWeight: PropTypes.string.isRequired,
+    colorHover: PropTypes.string.isRequired,
+    backgroundHover: PropTypes.string.isRequired,
+    boxShadowHover: PropTypes.string.isRequired,
 };
 
 Button.defaultProps = {
@@ -104,7 +114,10 @@ Button.defaultProps = {
     boxShadow: 'black',
     fontSize: `${fontSize.medium}`,
     size: '0.5rem 5rem 0.5rem 5rem',
-    fontWeight: `${fontWeight.large}`
+    fontWeight: `${fontWeight.large}`,
+    colorHover: `${colorsPrimary.secondary}`,
+    backgroundHover: `${colorsPrimary.primary}`,
+    boxShadowHover: `${boxShadow.small}`
 };
 
 export default Button

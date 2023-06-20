@@ -86,5 +86,8 @@ export const boxShadowSpecial = {
     large: '0 0 0.8rem greenyellow',
     smalls: '0 0 0.2rem coral',
     mediums: '0 0 0.4rem coral',
-    larges: '0 0 0.8rem coral'
+    larges: '0 0 0.8rem coral',
+    smallW: '0 0 0.2rem white',
+    mediumW: '0 0 0.4rem white',
+    largeW: '0 0 0.8rem white'
 };
