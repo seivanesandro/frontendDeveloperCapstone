@@ -15,7 +15,7 @@ export default function BookingPage() {
         return fetchAPI(dateObj);
     }
 
-    const navigate = useNavigate();
+   const navigate = useNavigate();
 
     function submitForm(formData) {
         const isSubmitted = submitAPI(formData);

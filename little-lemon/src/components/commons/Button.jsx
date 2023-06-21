@@ -70,7 +70,8 @@ function Button({
     colorHover,
     backgroundHover,
     boxShadowHover,
-    children
+    children,
+    onClick
 }) {
     return (
         <Btn
@@ -84,8 +85,10 @@ function Button({
             colorHover={colorHover}
             backgroundHover={backgroundHover}
             boxShadowHover={boxShadowHover}
+            onClick={onClick}
         >
-            {name}{children}
+            {name}
+            {children}
         </Btn>
     );
 }
@@ -102,6 +105,7 @@ Button.propTypes = {
     colorHover: PropTypes.string.isRequired,
     backgroundHover: PropTypes.string.isRequired,
     boxShadowHover: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {
@@ -115,7 +119,8 @@ Button.defaultProps = {
     fontWeight: `${fontWeight.large}`,
     colorHover: `${colorsPrimary.secondary}`,
     backgroundHover: `${colorsPrimary.primary}`,
-    boxShadowHover: `${boxShadow.small}`
+    boxShadowHover: `${boxShadow.small}`,
+    onclick: () => {},
 };
 
 export default Button

@@ -79,7 +79,7 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-    text: 'loream bla bla bla bla bla',
+    text: 'loream',
     color: `${colorsSpecials.third}`,
     fontFamily: `${fontFamily.karla}`,
     fontSize: `${fontSize.small}`,

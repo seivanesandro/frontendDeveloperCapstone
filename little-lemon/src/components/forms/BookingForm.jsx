@@ -54,7 +54,8 @@ function BookingForm({
     const currentDate = new Date()
         .toISOString()
         .split('T')[0];
-    const options = availableTimes.map(time => (
+
+    const options = availableTimes.map((time) => (
         <option key={time}>{time}</option>
     ));
     return (
