@@ -22,6 +22,8 @@ export default function BookingPage() {
 
         if (isSubmitted) {
             navigate('/confirmed');
+        } else {
+            alert('Data Submission Failed');
         }
     }
 

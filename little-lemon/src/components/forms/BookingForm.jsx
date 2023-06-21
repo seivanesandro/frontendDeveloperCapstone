@@ -6,7 +6,7 @@ import Select from '../commons/Select';
 import Input from '../commons/Input';
 
 const FormStyle = styled.div`
-    margin: 2rem;
+    margin: 2rem 0;
 `;
 
 function BookingForm({
@@ -63,7 +63,7 @@ function BookingForm({
             <Text
                 sizeText="60rem"
                 text="Please fill your data accurately below to allow us to give the best experience possible."
-                fontSize="22px"
+                fontSize="20px"
                 color="#F4CE14"
             />
             <form onSubmit={handleSubmit}>
@@ -189,7 +189,7 @@ function BookingForm({
                         value=""
                         aria-label="submit button"
                         size="0.5rem 25rem 0.5rem 25rem"
-                        fontSize="22px"
+                        fontSize="18px"
                         colorText="#fff"
                         backgroundText="#000000"
                         boxShadow="white"

@@ -19,8 +19,8 @@ const AppContainer = styled.div`
 const BookingPageContainer = styled.div`
     display: flex;
     background-color: #333333;
-    flex-direction: row;
     flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 5rem 5rem 10rem;

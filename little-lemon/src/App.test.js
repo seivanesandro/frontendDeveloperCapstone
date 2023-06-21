@@ -14,16 +14,13 @@ import Button from './components/commons/Button';
 
 //test the component Text
   test('it renders the given text in the Text component', () => {
-      const text = 'loream';
-      render(<Text text={text} />);
-      expect(screen.getByText(`${text}`)).toBeInTheDocument();
+      const textTest = 'loream';
+      render(<Text text={textTest} />);
+      expect(screen.getByText(`${textTest}`)).toBeInTheDocument();
   }); 
 
 
-
-
-
-  //test the text of Subtitle on hero
+  //test the text of Subtitle
 
  test('renders the test in subtitle hero', () => {
    render(<Subtitle subtitle="Chicago"/>);
@@ -32,9 +29,11 @@ import Button from './components/commons/Button';
 
 //test the component subttitle
   test('it renders the subtitle component', () => {
-      const subtitle = 'subtitle';
-      render(<Subtitle subtitle={subtitle} />);
-      expect(screen.getByText(`${subtitle}`)).toBeInTheDocument();
+      const subtitleTest = 'subtitle';
+      render(
+          <Subtitle subtitle={subtitleTest} />
+      );
+      expect(screen.getByText(`${subtitleTest}`)).toBeInTheDocument();
   });
 
 

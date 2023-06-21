@@ -58,7 +58,7 @@ Select.propTypes = {
     title: PropTypes.string.isRequired,
     borderRadius: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
-    backgound: PropTypes.string.isRequired,
+    backgound: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,

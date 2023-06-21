@@ -36,18 +36,16 @@ const CardContainer = styled.div`
     background: ${({ backgroundColorCard }) =>
         backgroundColorCard};
     box-shadow: ${boxShadow.medium};
+    display: flex;
+    flex-direction: column;
 
     @media only screen and (${devices.mobileP}) {
-
     }
     @media only screen and (${devices.mobileM}) {
-
     }
     @media only screen and (${devices.mobileG}) {
-
     }
     @media only screen and (${devices.tablet}) {
-
     }
 `;
 
@@ -74,6 +72,10 @@ const CardHeader = styled.div`
 const CardBody = styled.div`
     background: ${colorsSecundary.primary};
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
 
     @media only screen and (${devices.mobileP}) {
         padding: 2rem;

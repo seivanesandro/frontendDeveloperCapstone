@@ -25,7 +25,7 @@ function Input({
                 id="form1"
                 required
                 contrast
-                
+
             />
         </>
     );
