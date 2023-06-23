@@ -19,7 +19,7 @@ const LabelStyle = styled.label`
     letter-spacing: 0.1rem;
 `;
 function Select({
-    title,
+    titleLabel,
     children,
     id,
     name,
@@ -35,7 +35,7 @@ function Select({
         <>
             <LabelStyle colorLabel={colorLabel}>
                 {' '}
-                {title}
+                {titleLabel}
             </LabelStyle>
             <SelectStyle
                 id={id}
@@ -55,7 +55,7 @@ function Select({
 }
 
 Select.propTypes = {
-    title: PropTypes.string.isRequired,
+    titleLabel: PropTypes.string.isRequired,
     borderRadius: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
     backgound: PropTypes.string,
@@ -67,7 +67,7 @@ Select.propTypes = {
 };
 
 Select.defaultProps = {
-    title: 'title',
+    titleLabel: 'title',
     borderRadius: '5%',
     color: `${colorsSecundary.primary}`,
     background: `${colorsSpecials.four}`,

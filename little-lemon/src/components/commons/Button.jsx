@@ -105,7 +105,7 @@ Button.propTypes = {
     colorHover: PropTypes.string.isRequired,
     backgroundHover: PropTypes.string.isRequired,
     boxShadowHover: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func,
 };
 
 Button.defaultProps = {

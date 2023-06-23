@@ -13,19 +13,21 @@ function Input({
     inputPlaceholder,
     type,
     boxShadow,
-
+    className,
+    id
 }) {
     return (
         <>
             <InputText
-                label={inputPlaceholder}
+                className={className}
                 type={type}
+                data-testid="input-field"
+                id={id}
                 size="lg"
-                boxShadow={boxShadow}
-                id="form1"
-                required
+                required={true}
                 contrast
-
+                label={inputPlaceholder}
+                boxShadow={boxShadow}
             />
         </>
     );
@@ -33,13 +35,15 @@ function Input({
 
 Input.propTypes = {
     inputPlaceholder: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
+   
     boxShadow: PropTypes.string.isRequired,
+
 };
 
 Input.defaultProps = {
     inputPlaceholder: 'placeholder input',
     type: 'text',
+    id: 'form1',
     boxShadow: `${boxShadowSpecial.mediumW}`
 };
 export default Input

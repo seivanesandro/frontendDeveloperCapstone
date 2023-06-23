@@ -18,19 +18,49 @@ import { devices } from '../../utilities/constantes';
 
 const FooterHeaderContainer = styled.section`
     background: ${colorsPrimary.primary};
+
+    @media only screen and (${devices.tablet}) {
+        display: flex !important;
+        max-width: 1068px;
+        justify-content: center;
+    }
 `;
 
 const FooterMainContainer = styled.div`
     background: ${colorsPrimary.primary};
+
+    @media only screen and (${devices.tablet}) {
+        display: block !important;
+
+    }
 `;
 
 const FooterBoottom = styled.div`
     background: ${colorsPrimary.primary};
+
+    @media only screen and (${devices.tablet}) {
+        display: flex !important;
+        flex-direction: column;
+        max-width: 1068px;
+        justify-content: center;
+    }
 `;
 
 const RowContainer = styled(MDBRow)`
-    display: flex;
-    flex-direction: row;
+
+    @media only screen and (${devices.tablet}) {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+
+const ColContainer = styled(MDBCol)`
+    @media only screen and (${devices.tablet}) {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const FooterTitle = styled.h6`
@@ -184,8 +214,8 @@ const CopyrightFooter = styled.span`
 function Footer () {
   return (
       <>
-          <MDBFooter className="footer footer-container text-center text-lg-start text-muted">
-              <FooterHeaderContainer className="footer-header-container d-flex justify-content-center border border-bottom-1 p-4">
+          <MDBFooter className="footer footer-container text-center text-md-start text-muted">
+              <FooterHeaderContainer className="footer-header-container d-flex justify-content-center border border-primary border-bottom-1 p-4">
                   <div className="social-media-icons-container m-4">
                       <a
                           href="/"
@@ -225,7 +255,7 @@ function Footer () {
               <section className="footer-section-main">
                   <FooterMainContainer className="text-center text-md-start p-3 footer-main-container">
                       <RowContainer className="row text-center d-flex justify-content-evenly mt-1">
-                          <MDBCol
+                          <ColContainer
                               md="1"
                               lg="1"
                               xl="1"
@@ -235,9 +265,9 @@ function Footer () {
                                   src={logoFooter}
                                   alt="logo-footer"
                               />
-                          </MDBCol>
+                          </ColContainer>
 
-                          <MDBCol
+                          <ColContainer
                               md="1"
                               lg="1"
                               xl="1"
@@ -249,7 +279,7 @@ function Footer () {
 
                               <p>
                                   <FooterLink
-                                  href='/'
+                                      href="/"
                                       className="footer-link"
                                   >
                                       Home
@@ -300,9 +330,9 @@ function Footer () {
                                       Login
                                   </FooterLink>
                               </p>
-                          </MDBCol>
+                          </ColContainer>
 
-                          <MDBCol
+                          <ColContainer
                               md="1"
                               lg="1"
                               xl="1"
@@ -323,7 +353,7 @@ function Footer () {
                               <FooterText>
                                   +0123456788
                               </FooterText>
-                          </MDBCol>
+                          </ColContainer>
                       </RowContainer>
                   </FooterMainContainer>
               </section>

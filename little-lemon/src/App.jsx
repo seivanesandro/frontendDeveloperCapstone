@@ -23,7 +23,7 @@ const BookingPageContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 5rem 5rem 10rem;
+    padding: 5rem 3rem 10rem;
 `;
 
 const BookingConfirmContainer = styled.div`

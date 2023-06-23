@@ -1,9 +1,10 @@
-
 import { fireEvent, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+//import userEvent from '@testing-library/user-event';
 import Text from './components/commons/Text';
 import Subtitle from './components/commons/Subtitle';
 import Button from './components/commons/Button';
-
+import Input from './components/commons/Input';
 
 //test the header of bookingForms header
 
@@ -13,12 +14,11 @@ import Button from './components/commons/Button';
   });
 
 //test the component Text
-  test('it renders the given text in the Text component', () => {
+  test('it test thegiven text to component Text', () => {
       const textTest = 'loream';
       render(<Text text={textTest} />);
       expect(screen.getByText(`${textTest}`)).toBeInTheDocument();
-  }); 
-
+  });
 
   //test the text of Subtitle
 
@@ -28,7 +28,7 @@ import Button from './components/commons/Button';
   });
 
 //test the component subttitle
-  test('it renders the subtitle component', () => {
+  test('it test type of subtitle component', () => {
       const subtitleTest = 'subtitle';
       render(
           <Subtitle subtitle={subtitleTest} />
@@ -37,8 +37,7 @@ import Button from './components/commons/Button';
   });
 
 
-  //test the text button from bookingform
-  
+  //test the text button
 
  test('renders button and fires click event', () => {
   const onClickMock = jest.fn();
@@ -46,34 +45,19 @@ import Button from './components/commons/Button';
   const button = screen.getByText('Button');
   fireEvent.click(button);
   expect(onClickMock).toHaveBeenCalled();
-  }); 
-
-//test the component button
-/*   test('it renders the given text in the Text component', () => {
-      const text = 'loream';
-      render(<Text text={text} />);
-      expect(screen.getByText(`${text}`)).toBeInTheDocument();
-  }); 
- */
+  });
 
 
-/*import { render, fireEvent, screen } from "@testing-library/react";
-import App from "./App";
 
-test("Adds one", () => {
-  // render the App component
-  render(<App />); 
-  
-  // save the heading in a variable
-  const heading = screen.getByTestId("currentNumber"); 
-  
-  // save the button in a variable
-  const btn = screen.getByTestId("addOne"); 
-  
-  // click the btn
-  fireEvent.click(btn); 
-  
-  // test assumption
-  expect(heading).toHaveTextContent("2");
-});
- */
+  //test the component input
+describe("<Input />", () => {
+    test("displays text input", () => {
+        render(<Input  type="text" />);
+        const userInput = screen.getByTestId("input-field");
+        const userInputValue = screen.getByDisplayValue("");
+
+        expect(userInput).toBeInTheDocument();
+        expect(userInputValue).toBeInTheDocument();
+     });
+
+  });

@@ -21,12 +21,12 @@ import {
 } from '../../../utilities/utils';
 
 const Img = styled.img`
-    width: 190px;
+    width: 180px;
     height: 56px;
 `;
 
 const LabelsStyle = styled.label`
-    font-size: 18px;
+    font-size: 17px;
     font-weight: ${fontWeight.medium};
     color: ${colorsPrimary.primary};
     cursor: pointer;
@@ -50,7 +50,7 @@ export default function NavBar({
     return (
         <>
             <MDBNavbar
-                expand="xl"
+                expand="lg"
                 light
                 bgColor="light"
                 className="navBar fixed-top p-2 border border-0 shadow"

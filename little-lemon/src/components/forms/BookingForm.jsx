@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import Button from '../commons/Button';
-import Text from '../commons/Text'; 
+import Text from '../commons/Text';
 import Select from '../commons/Select';
 import Input from '../commons/Input';
 
@@ -55,7 +55,7 @@ function BookingForm({
         .toISOString()
         .split('T')[0];
 
-    const options = availableTimes.map((time) => (
+    const options = availableTimes.map(time => (
         <option key={time}>{time}</option>
     ));
     return (
@@ -140,7 +140,7 @@ function BookingForm({
                 </FormStyle>
                 <FormStyle className="form-style">
                     <Select
-                        title="Choose your best time"
+                        titleLabel="Choose your best time"
                         id="res-time "
                         name="time"
                         value={formData.time}
@@ -153,7 +153,7 @@ function BookingForm({
                 </FormStyle>
                 <FormStyle className="form-style">
                     <Select
-                        title="Choose your Occasion"
+                        titleLabel="Choose your Occasion"
                         id="occasion"
                         name="occasion"
                         value={formData.occasion}
