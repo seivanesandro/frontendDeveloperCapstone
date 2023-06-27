@@ -215,7 +215,7 @@ function Footer () {
   return (
       <>
           <MDBFooter className="footer footer-container text-center text-md-start text-muted">
-              <FooterHeaderContainer className="footer-header-container d-flex justify-content-center border border-primary border-bottom-1 p-4">
+              <FooterHeaderContainer className="footer-header-container d-flex justify-content-center border-bottom-1 p-4">
                   <div className="social-media-icons-container m-4">
                       <a
                           href="/"
